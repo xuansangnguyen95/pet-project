@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" parallel="false">
+<suite name="Nop Commerce" parallel="false">
   <test name="Test">
     <classes>
-      <class name="facebook.web.users.Login"/>
+      <class name="com.nopcommerce.users.Register_Login_Page_Object"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
