@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Nop Commerce" parallel="false">
-  <test name="Test">
+
+  <test name="Run on Firefox">
+  <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.nopcommerce.users.Register_Login_Page_Object"/>
+      <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/>
     </classes>
-  </test> <!-- Test -->
+  </test> 
+  
+  <test name="Run on Chrome">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/>
+    </classes>
+  </test>
+  
+  <test name="Run on Firefox headless">
+    <parameter name="browser" value="firefox_headless"/>
+    <classes>
+      <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/>
+    </classes>
+  </test> 
+  
+  <test name="Run on Chrome headless">
+    <parameter name="browser" value="chrome_headless"/>
+    <classes>
+      <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/>
+    </classes>
+  </test> 
+  
+  <test name="Run on Edge Chromium">
+    <parameter name="browser" value="edge_chromium"/>
+    <classes>
+      <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/>
+    </classes>
+  </test> 
+  
 </suite> <!-- Suite -->

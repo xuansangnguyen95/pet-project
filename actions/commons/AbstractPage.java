@@ -114,6 +114,9 @@ public class AbstractPage {
 	}
 
 	public void clickToElement(WebDriver driver, String locator) {
+		if(driver.toString().toLowerCase().contains("edge")) {
+			sleepInMilisecond(500);
+		}
 		WebElement element = getElement(driver, locator);
 		element.click();
 	}
@@ -121,6 +124,7 @@ public class AbstractPage {
 	public void sendKeysToElement(WebDriver driver, String locator, String value) {
 		WebElement element = getElement(driver, locator);
 		element.clear();
+		sleepInMilisecond(500);
 		element.sendKeys(value);
 	}
 
@@ -145,7 +149,7 @@ public class AbstractPage {
 	public void selectItemInCustomDropdown(WebDriver driver, String parentLocator, String childItemLocator,
 			String expectedItem) {
 		getElement(driver, parentLocator).click();
-		sleepInSecond(1);
+		sleepInMilisecond(1);
 
 		WebDriverWait explicitWait = new WebDriverWait(driver, 20);
 		explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(childItemLocator)));
@@ -156,18 +160,18 @@ public class AbstractPage {
 			if (item.getText().equals(expectedItem)) {
 				JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 				jsExecutor.executeScript("arguments[0].scrollIntoView(true);", item);
-				sleepInSecond(1);
+				sleepInMilisecond(1);
 
 				item.click();
-				sleepInSecond(1);
+				sleepInMilisecond(1);
 				break;
 			}
 		}
 	}
 
-	public void sleepInSecond(long timeout) {
+	public void sleepInMilisecond(long timeout) {
 		try {
-			Thread.sleep(timeout * 1000);
+			Thread.sleep(timeout);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -283,7 +287,7 @@ public class AbstractPage {
 		WebElement element = getElement(driver, locator);
 		String originalStyle = element.getAttribute("style");
 		jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", "border: 2px solid red; border-style: dashed;");
-		sleepInSecond(1);
+		sleepInMilisecond(1);
 		jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", originalStyle);
 	}
 
