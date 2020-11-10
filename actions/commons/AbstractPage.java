@@ -14,6 +14,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.CustomerInforPageObject;
+import pageObjects.HomePageObject;
+import pageObjects.PageGeneratorManager;
+import pageObjects.SearchPageObject;
+import pageObjects.ShippingAndReturnPageObject;
+import pageObjects.SitemapPageObject;
+import pageObjects.WishListPageObject;
+import pageUIs.AbstractPageUI;
+
 public class AbstractPage {
 	
 	private WebElement element;
@@ -369,15 +378,42 @@ public class AbstractPage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
 	}
 	
+	public SearchPageObject openSearch(WebDriver driver) {
+		waitToElementClickable(driver, AbstractPageUI.SEARCH_LINK);		
+		clickToElement(driver, AbstractPageUI.SEARCH_LINK);
+		return PageGeneratorManager.getSearchPage(driver);
+	}
+
+	public ShippingAndReturnPageObject openShippingAndReturn(WebDriver driver) {
+		waitToElementClickable(driver, AbstractPageUI.SHIPPING_AND_RETURN_LINK);		
+		clickToElement(driver, AbstractPageUI.SHIPPING_AND_RETURN_LINK);
+		return PageGeneratorManager.getShippingAndReturnPage(driver);
+	}
 	
+	public SitemapPageObject openSitemap(WebDriver driver) {
+		waitToElementClickable(driver, AbstractPageUI.SITEMAP_LINK);		
+		clickToElement(driver, AbstractPageUI.SITEMAP_LINK);
+		return PageGeneratorManager.getSitemapPage(driver);
+	}
 	
+	public CustomerInforPageObject openMyAccount(WebDriver driver) {
+		waitToElementClickable(driver, AbstractPageUI.MY_ACCOUNT_LINK);		
+		clickToElement(driver, AbstractPageUI.MY_ACCOUNT_LINK);
+		return PageGeneratorManager.getCustomerInforPage(driver);
+	}
 	
-	
-	
-	
-	
-	
-	
+	public HomePageObject openHomePage(WebDriver driver) {
+		waitToElementClickable(driver, AbstractPageUI.HOMEPAGE_LINK);		
+		clickToElement(driver, AbstractPageUI.HOMEPAGE_LINK);
+		return PageGeneratorManager.getHomePage(driver);
+	}
+
+	public WishListPageObject openWishList(WebDriver driver) {
+		waitToElementClickable(driver, AbstractPageUI.WISH_LIST_LINK);		
+		clickToElement(driver, AbstractPageUI.WISH_LIST_LINK);
+		return PageGeneratorManager.getWishListPage(driver);
+	}
+
 	
 	
 	
