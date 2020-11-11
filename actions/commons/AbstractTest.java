@@ -51,7 +51,13 @@ public class AbstractTest{
 		return driver;
 	}
 	
-	
+	public void sleepInMilisecond(long timeout) {
+		try {
+			Thread.sleep(timeout);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	
 	

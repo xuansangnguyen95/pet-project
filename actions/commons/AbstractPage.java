@@ -122,6 +122,11 @@ public class AbstractPage {
 		return By.xpath(locator);
 	}
 
+	public String getDynamicLocator(String locator, String... values) {
+		locator = String.format(locator, (Object[]) values);
+		return locator;
+	}
+	
 	public void clickToElement(WebDriver driver, String locator) {
 		if(driver.toString().toLowerCase().contains("edge")) {
 			sleepInMilisecond(500);
@@ -129,9 +134,24 @@ public class AbstractPage {
 		WebElement element = getElement(driver, locator);
 		element.click();
 	}
-
+	
+	public void clickToElement(WebDriver driver, String locator, String... values) {
+		if(driver.toString().toLowerCase().contains("edge")) {
+			sleepInMilisecond(500);
+		}
+		WebElement element = getElement(driver, getDynamicLocator(locator, values));
+		element.click();
+	}
+	
 	public void sendKeysToElement(WebDriver driver, String locator, String value) {
 		WebElement element = getElement(driver, locator);
+		element.clear();
+		sleepInMilisecond(500);
+		element.sendKeys(value);
+	}
+
+	public void sendKeysToElement(WebDriver driver, String locator, String value, String... values) {
+		WebElement element = getElement(driver, getDynamicLocator(locator, values));
 		element.clear();
 		sleepInMilisecond(500);
 		element.sendKeys(value);
@@ -218,6 +238,10 @@ public class AbstractPage {
 		return getElement(driver, locator).isDisplayed();
 	}
 	
+	public boolean isElementDisplayed(WebDriver driver, String locator, String... values) {
+		return getElement(driver, getDynamicLocator(locator, values)).isDisplayed();
+	}
+	
 	public boolean isElementSelected(WebDriver driver, String locator) {
 		return getElement(driver, locator).isSelected();
 	}
@@ -243,7 +267,6 @@ public class AbstractPage {
 		Actions action = new Actions(driver);
 		action.contextClick(getElement(driver, locator)).perform();
 	}
-	
 	
 	public void hoverMouseToElement(WebDriver driver, String locator) {
 		Actions action = new Actions(driver);
@@ -368,14 +391,29 @@ public class AbstractPage {
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
 	}
 	
+	public void waitToElementVisible(WebDriver driver, String locator, String... values) {
+		WebDriverWait explicitWait = new WebDriverWait(driver, 30);
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
+	}
+	
 	public void waitToElementInvisible(WebDriver driver, String locator) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
 	}
 	
+	public void waitToElementInvisible(WebDriver driver, String locator, String... values) {
+		WebDriverWait explicitWait = new WebDriverWait(driver, 30);
+		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
+	}
+	
 	public void waitToElementClickable(WebDriver driver, String locator) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
+	}
+	
+	public void waitToElementClickable(WebDriver driver, String locator, String... values) {
+		WebDriverWait explicitWait = new WebDriverWait(driver, 30);
+		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator, values))));
 	}
 	
 	public SearchPageObject openSearch(WebDriver driver) {
@@ -414,7 +452,27 @@ public class AbstractPage {
 		return PageGeneratorManager.getWishListPage(driver);
 	}
 
+	public AbstractPage openLinkByPageName(WebDriver driver, String pageName) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+		
+		switch (pageName) {
+		case "Search":
+			return PageGeneratorManager.getSearchPage(driver);
+		case "Shipping & returns":
+			return PageGeneratorManager.getShippingAndReturnPage(driver);
+		case "Sitemap":
+			return PageGeneratorManager.getSitemapPage(driver);
+		default:
+			return PageGeneratorManager.getCustomerInforPage(driver);
+		}
+	}
 	
+	public void openLinkWithPageName(WebDriver driver, String pageName) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+		
+	}
 	
 	
 	

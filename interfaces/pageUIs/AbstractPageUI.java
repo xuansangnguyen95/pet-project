@@ -8,4 +8,5 @@ public class AbstractPageUI {
 	public static final String WISH_LIST_LINK = "//div[@class='header-links']//span[text()='Wishlist']";
 	public static final String HOMEPAGE_LINK = "//img[@alt='nopCommerce demo store']";
 	
+	public static final String DYNAMIC_LINK = "//ul[@class='list']//a[text()='%s']";
 }
