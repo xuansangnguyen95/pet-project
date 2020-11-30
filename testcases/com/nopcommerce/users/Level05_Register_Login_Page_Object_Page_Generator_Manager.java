@@ -11,21 +11,30 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.AbstractTest;
-import pageObjects.CustomerInforPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.UserCustomerInforPageObject;
+import pageObjects.UserHomePageObject;
+import pageObjects.UserLoginPageObject;
+import pageObjects.PageGeneratorManager;
+import pageObjects.UserRegisterPageObject;
+import pageObjects.UserSearchPageObject;
+import pageObjects.UserShippingAndReturnPageObject;
+import pageObjects.UserSitemapPageObject;
+import pageObjects.UserWishListPageObject;
 
-public class Register_Login_Page_Object_level04 extends AbstractTest {
+public class Level05_Register_Login_Page_Object_Page_Generator_Manager extends AbstractTest {
 	WebDriver driver;
 	String source_folder = System.getProperty("user.dir");
 	Select select;
 	String firstName, lastName, email, companyName, password;
 	
-	HomePageObject homePage;
-	LoginPageObject loginPage;
-	RegisterPageObject registerPage;
-	CustomerInforPageObject customerInforPage;
+	UserHomePageObject homePage;
+	UserLoginPageObject loginPage;
+	UserRegisterPageObject registerPage;
+	UserCustomerInforPageObject customerInforPage;
+	UserSearchPageObject searchPage;
+	UserShippingAndReturnPageObject shippingAndReturnPage;
+	UserSitemapPageObject sitemap;
+	UserWishListPageObject wishList;
 
 	@Parameters("browser")
 	@BeforeClass
@@ -41,15 +50,16 @@ public class Register_Login_Page_Object_level04 extends AbstractTest {
 		companyName = "gacy";
 		password = "johngacy";
 		
-		homePage = new HomePageObject(driver);
+	
 		 
 	}
 
 	@Test
 	public void TC01_Register() {
-		homePage.clickToRegisterLink();
 		
-		registerPage = new RegisterPageObject(driver);
+		homePage = PageGeneratorManager.getUserHomePage(driver);
+		
+		registerPage = homePage.clickToRegisterLink();
 		
 		registerPage.clickToGenderMaleRadioButton();
 		
@@ -75,21 +85,19 @@ public class Register_Login_Page_Object_level04 extends AbstractTest {
 		
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 		
-		registerPage.clickToLogoutLink();
-		
-		//homePage = new HomePageObject(driver);
+		homePage = registerPage.clickToLogoutLink();
 	}
 	
 	@Test
 	public void TC02_Login() {
-		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
+		
+		loginPage = homePage.clickToLoginLink();
 		
 		loginPage.inputToEmailTextbox(email);
 		loginPage.inputToPasswordTextbox(password);
-		loginPage.clickToLoginButton();
 		
-		homePage = new HomePageObject(driver);
+		
+		homePage = loginPage.clickToLoginButton();
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 		Assert.assertTrue(homePage.isLogoutLinkDisplayed());
 		
@@ -97,8 +105,8 @@ public class Register_Login_Page_Object_level04 extends AbstractTest {
 	
 	@Test
 	public void TC03_View_My_Account() {
-		homePage.clickToMyAccountLink();
-		customerInforPage = new CustomerInforPageObject(driver);
+		
+		customerInforPage = homePage.clickToMyAccountLink();
 		
 		Assert.assertTrue(customerInforPage.isGenderMaleRadioButtonSelected());
 		
@@ -111,10 +119,30 @@ public class Register_Login_Page_Object_level04 extends AbstractTest {
 		
 		Assert.assertEquals(customerInforPage.getEmailTextboxValue(), email);
 		Assert.assertEquals(customerInforPage.getCompanyTextboxValue(), companyName);
+	}
+	
+	@Test
+	public void TC04_Switch_Page() {
+		//hompage -> search
+		searchPage = homePage.openSearch(driver);
 		
+		//search -> shipping and return
+		shippingAndReturnPage = searchPage.openShippingAndReturn(driver);
+		
+		//shipping and return -> sitemap
+		sitemap = shippingAndReturnPage.openSitemap(driver);
+		
+		//sitemap -> footer my account
+		customerInforPage = sitemap.openMyAccount(driver);
+		
+		//footer my account -> homepage
+		homePage = customerInforPage.openHomePage(driver);
+		
+		//homepage -> header wishlist
+		wishList = homePage.openWishList(driver);
 		
 	}
-		
+	
 	@AfterClass
 	public void afterClass() {
 		driver.quit();

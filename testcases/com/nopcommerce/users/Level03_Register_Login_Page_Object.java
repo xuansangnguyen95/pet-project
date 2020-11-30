@@ -1,46 +1,40 @@
 package com.nopcommerce.users;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import commons.AbstractTest;
-import pageObjects.CustomerInforPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.PageGeneratorManager;
-import pageObjects.RegisterPageObject;
-import pageObjects.SearchPageObject;
-import pageObjects.ShippingAndReturnPageObject;
-import pageObjects.SitemapPageObject;
-import pageObjects.WishListPageObject;
+import commons.AbstractPage;
+import pageObjects.UserCustomerInforPageObject;
+import pageObjects.UserHomePageObject;
+import pageObjects.UserLoginPageObject;
+import pageObjects.UserRegisterPageObject;
 
-public class Register_Login_Page_Object_level05_Page_Generator_Manager extends AbstractTest {
+public class Level03_Register_Login_Page_Object extends AbstractPage {
 	WebDriver driver;
 	String source_folder = System.getProperty("user.dir");
 	Select select;
 	String firstName, lastName, email, companyName, password;
 	
-	HomePageObject homePage;
-	LoginPageObject loginPage;
-	RegisterPageObject registerPage;
-	CustomerInforPageObject customerInforPage;
-	SearchPageObject searchPage;
-	ShippingAndReturnPageObject shippingAndReturnPage;
-	SitemapPageObject sitemap;
-	WishListPageObject wishList;
+	UserHomePageObject homePage;
+	UserLoginPageObject loginPage;
+	UserRegisterPageObject registerPage;
+	UserCustomerInforPageObject customerInforPage;
 
-	@Parameters("browser")
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
-
+	public void beforeClass() {
+		System.setProperty("webdriver.chrome.driver", ".\\browserDriver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://demo.nopcommerce.com");
 		
@@ -50,16 +44,17 @@ public class Register_Login_Page_Object_level05_Page_Generator_Manager extends A
 		companyName = "gacy";
 		password = "johngacy";
 		
-	
+		homePage = new UserHomePageObject(driver);
 		 
 	}
+	
 
 	@Test
 	public void TC01_Register() {
+		homePage.clickToRegisterLink();
 		
-		homePage = PageGeneratorManager.getHomePage(driver);
-		
-		registerPage = homePage.clickToRegisterLink();
+		registerPage = new UserRegisterPageObject(driver);
+		sleepInMilisecond(1);
 		
 		registerPage.clickToGenderMaleRadioButton();
 		
@@ -85,19 +80,22 @@ public class Register_Login_Page_Object_level05_Page_Generator_Manager extends A
 		
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 		
-		homePage = registerPage.clickToLogoutLink();
+		registerPage.clickToLogoutLink();
+		
+		//homePage = new HomePageObject(driver);
 	}
 	
 	@Test
 	public void TC02_Login() {
-		
-		loginPage = homePage.clickToLoginLink();
+		sleepInMilisecond(1);
+		homePage.clickToLoginLink();
+		loginPage = new UserLoginPageObject(driver);
 		
 		loginPage.inputToEmailTextbox(email);
 		loginPage.inputToPasswordTextbox(password);
+		loginPage.clickToLoginButton();
 		
-		
-		homePage = loginPage.clickToLoginButton();
+		homePage = new UserHomePageObject(driver);
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 		Assert.assertTrue(homePage.isLogoutLinkDisplayed());
 		
@@ -105,8 +103,9 @@ public class Register_Login_Page_Object_level05_Page_Generator_Manager extends A
 	
 	@Test
 	public void TC03_View_My_Account() {
-		
-		customerInforPage = homePage.clickToMyAccountLink();
+		sleepInMilisecond(1);
+		homePage.clickToMyAccountLink();
+		customerInforPage = new UserCustomerInforPageObject(driver);
 		
 		Assert.assertTrue(customerInforPage.isGenderMaleRadioButtonSelected());
 		
@@ -119,34 +118,18 @@ public class Register_Login_Page_Object_level05_Page_Generator_Manager extends A
 		
 		Assert.assertEquals(customerInforPage.getEmailTextboxValue(), email);
 		Assert.assertEquals(customerInforPage.getCompanyTextboxValue(), companyName);
-	}
-	
-	@Test
-	public void TC04_Switch_Page() {
-		//hompage -> search
-		searchPage = homePage.openSearch(driver);
 		
-		//search -> shipping and return
-		shippingAndReturnPage = searchPage.openShippingAndReturn(driver);
-		
-		//shipping and return -> sitemap
-		sitemap = shippingAndReturnPage.openSitemap(driver);
-		
-		//sitemap -> footer my account
-		customerInforPage = sitemap.openMyAccount(driver);
-		
-		//footer my account -> homepage
-		homePage = customerInforPage.openHomePage(driver);
-		
-		//homepage -> header wishlist
-		wishList = homePage.openWishList(driver);
 		
 	}
-	
+		
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
 	}
 	
-
+	public int getRandomNumber() {
+		Random temp = new Random();
+		return temp.nextInt(999);
+	}
+	
 }

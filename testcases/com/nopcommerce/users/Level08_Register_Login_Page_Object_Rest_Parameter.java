@@ -12,30 +12,30 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.AbstractTest;
-import pageObjects.CustomerInforPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
+import pageObjects.UserCustomerInforPageObject;
+import pageObjects.UserHomePageObject;
+import pageObjects.UserLoginPageObject;
 import pageObjects.PageGeneratorManager;
-import pageObjects.RegisterPageObject;
-import pageObjects.SearchPageObject;
-import pageObjects.ShippingAndReturnPageObject;
-import pageObjects.SitemapPageObject;
-import pageObjects.WishListPageObject;
+import pageObjects.UserRegisterPageObject;
+import pageObjects.UserSearchPageObject;
+import pageObjects.UserShippingAndReturnPageObject;
+import pageObjects.UserSitemapPageObject;
+import pageObjects.UserWishListPageObject;
 
-public class Register_Login_Page_Object_level08_Rest_Parameter extends AbstractTest {
+public class Level08_Register_Login_Page_Object_Rest_Parameter extends AbstractTest {
 	WebDriver driver;
 	String source_folder = System.getProperty("user.dir");
 	Select select;
 	String firstName, lastName, email, companyName, password;
 	
-	HomePageObject homePage;
-	LoginPageObject loginPage;
-	RegisterPageObject registerPage;
-	CustomerInforPageObject customerInforPage;
-	SearchPageObject searchPage;
-	ShippingAndReturnPageObject shippingAndReturnPage;
-	SitemapPageObject sitemapPage;
-	WishListPageObject wishList;
+	UserHomePageObject homePage;
+	UserLoginPageObject loginPage;
+	UserRegisterPageObject registerPage;
+	UserCustomerInforPageObject customerInforPage;
+	UserSearchPageObject searchPage;
+	UserShippingAndReturnPageObject shippingAndReturnPage;
+	UserSitemapPageObject sitemapPage;
+	UserWishListPageObject wishList;
 
 	@Parameters("browser")
 	@BeforeClass
@@ -58,7 +58,7 @@ public class Register_Login_Page_Object_level08_Rest_Parameter extends AbstractT
 	@Test
 	public void TC01_Register() {
 		
-		homePage = PageGeneratorManager.getHomePage(driver);
+		homePage = PageGeneratorManager.getUserHomePage(driver);
 		
 		registerPage = homePage.clickToRegisterLink();
 		
@@ -147,16 +147,16 @@ public class Register_Login_Page_Object_level08_Rest_Parameter extends AbstractT
 	@Test
 	public void TC05_Switch_Page_02() {
 		//hompage -> search
-		searchPage = (SearchPageObject) homePage.openLinkByPageName(driver, "Search");
+		searchPage = (UserSearchPageObject) homePage.openLinkByPageName(driver, "Search");
 		
 		//search -> shipping and return
-		shippingAndReturnPage = (ShippingAndReturnPageObject) searchPage.openLinkByPageName(driver, "Shipping & returns");
+		shippingAndReturnPage = (UserShippingAndReturnPageObject) searchPage.openLinkByPageName(driver, "Shipping & returns");
 		
 		//shipping and return -> sitemap
-		sitemapPage = (SitemapPageObject) shippingAndReturnPage.openLinkByPageName(driver, "Sitemap");
+		sitemapPage = (UserSitemapPageObject) shippingAndReturnPage.openLinkByPageName(driver, "Sitemap");
 		
 		//sitemap -> footer my account
-		customerInforPage = (CustomerInforPageObject) sitemapPage.openLinkByPageName(driver, "My account");
+		customerInforPage = (UserCustomerInforPageObject) sitemapPage.openLinkByPageName(driver, "My account");
 		
 	}
 	
@@ -164,19 +164,19 @@ public class Register_Login_Page_Object_level08_Rest_Parameter extends AbstractT
 	public void TC05_Switch_Page_03() {
 		//hompage -> search
 		homePage.openLinkWithPageName(driver, "Search");
-		searchPage = PageGeneratorManager.getSearchPage(driver);
+		searchPage = PageGeneratorManager.getUserSearchPage(driver);
 		
 		//search -> shipping and return
 		searchPage.openLinkWithPageName(driver, "Shipping & returns");
-		shippingAndReturnPage = PageGeneratorManager.getShippingAndReturnPage(driver);
+		shippingAndReturnPage = PageGeneratorManager.getUserShippingAndReturnPage(driver);
 		
 		//shipping and return -> sitemap
 		shippingAndReturnPage.openLinkWithPageName(driver, "Sitemap");
-		sitemapPage = PageGeneratorManager.getSitemapPage(driver);
+		sitemapPage = PageGeneratorManager.getUserSitemapPage(driver);
 		
 		//sitemap -> footer my account
 		sitemapPage.openLinkWithPageName(driver, "My account");
-		customerInforPage = PageGeneratorManager.getCustomerInforPage(driver);
+		customerInforPage = PageGeneratorManager.getUserCustomerInforPage(driver);
 	}
 
 	

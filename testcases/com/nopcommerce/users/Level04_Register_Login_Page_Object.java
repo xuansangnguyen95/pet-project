@@ -1,40 +1,37 @@
 package com.nopcommerce.users;
 
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import commons.AbstractPage;
-import pageObjects.CustomerInforPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import commons.AbstractTest;
+import pageObjects.UserCustomerInforPageObject;
+import pageObjects.UserHomePageObject;
+import pageObjects.UserLoginPageObject;
+import pageObjects.UserRegisterPageObject;
 
-public class Register_Login_Page_Object_level03 extends AbstractPage {
+public class Level04_Register_Login_Page_Object extends AbstractTest {
 	WebDriver driver;
 	String source_folder = System.getProperty("user.dir");
 	Select select;
 	String firstName, lastName, email, companyName, password;
 	
-	HomePageObject homePage;
-	LoginPageObject loginPage;
-	RegisterPageObject registerPage;
-	CustomerInforPageObject customerInforPage;
+	UserHomePageObject homePage;
+	UserLoginPageObject loginPage;
+	UserRegisterPageObject registerPage;
+	UserCustomerInforPageObject customerInforPage;
 
+	@Parameters("browser")
 	@BeforeClass
-	public void beforeClass() {
-		System.setProperty("webdriver.chrome.driver", ".\\browserDriver\\chromedriver.exe");
-		driver = new ChromeDriver();
-		
+	public void beforeClass(String browserName) {
+		driver = getBrowserDriver(browserName);
+
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://demo.nopcommerce.com");
 		
@@ -44,17 +41,15 @@ public class Register_Login_Page_Object_level03 extends AbstractPage {
 		companyName = "gacy";
 		password = "johngacy";
 		
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 		 
 	}
-	
 
 	@Test
 	public void TC01_Register() {
 		homePage.clickToRegisterLink();
 		
-		registerPage = new RegisterPageObject(driver);
-		sleepInMilisecond(1);
+		registerPage = new UserRegisterPageObject(driver);
 		
 		registerPage.clickToGenderMaleRadioButton();
 		
@@ -87,15 +82,14 @@ public class Register_Login_Page_Object_level03 extends AbstractPage {
 	
 	@Test
 	public void TC02_Login() {
-		sleepInMilisecond(1);
 		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		
 		loginPage.inputToEmailTextbox(email);
 		loginPage.inputToPasswordTextbox(password);
 		loginPage.clickToLoginButton();
 		
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 		Assert.assertTrue(homePage.isLogoutLinkDisplayed());
 		
@@ -103,9 +97,8 @@ public class Register_Login_Page_Object_level03 extends AbstractPage {
 	
 	@Test
 	public void TC03_View_My_Account() {
-		sleepInMilisecond(1);
 		homePage.clickToMyAccountLink();
-		customerInforPage = new CustomerInforPageObject(driver);
+		customerInforPage = new UserCustomerInforPageObject(driver);
 		
 		Assert.assertTrue(customerInforPage.isGenderMaleRadioButtonSelected());
 		
@@ -127,9 +120,5 @@ public class Register_Login_Page_Object_level03 extends AbstractPage {
 		driver.quit();
 	}
 	
-	public int getRandomNumber() {
-		Random temp = new Random();
-		return temp.nextInt(999);
-	}
-	
+
 }

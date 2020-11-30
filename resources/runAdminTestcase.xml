@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Nop Commerce" parallel="false">
+
+  <test name="Run on Firefox">
+  <parameter name="browser" value="firefox"/>
+  <parameter name="url" value="http://admin-demo.nopcommerce.com/"/>
+    <classes>
+      <class name="com.nopcommerce.admin.Web_Data_Table_level09"/>
+    </classes>
+  </test> 
+</suite> <!-- Suite -->

@@ -4,11 +4,10 @@ import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
 
-public class WishListPageObject extends AbstractPage {
+public class UserAddressesPageObject extends AbstractPage {
 	WebDriver driver;
 
-	public WishListPageObject(WebDriver driver) {
+	public UserAddressesPageObject(WebDriver driver) {
 		this.driver = driver;
 	}
 }
-		

@@ -14,13 +14,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageObjects.CustomerInforPageObject;
-import pageObjects.HomePageObject;
+import pageObjects.UserCustomerInforPageObject;
+import pageObjects.UserHomePageObject;
 import pageObjects.PageGeneratorManager;
-import pageObjects.SearchPageObject;
-import pageObjects.ShippingAndReturnPageObject;
-import pageObjects.SitemapPageObject;
-import pageObjects.WishListPageObject;
+import pageObjects.UserSearchPageObject;
+import pageObjects.UserShippingAndReturnPageObject;
+import pageObjects.UserSitemapPageObject;
+import pageObjects.UserWishListPageObject;
 import pageUIs.AbstractPageUI;
 
 public class AbstractPage {
@@ -210,26 +210,50 @@ public class AbstractPage {
 		WebElement element = getElement(driver, locator);
 		return element.getAttribute(attributeName);
 	}
-
+	
 	public String getElementText(WebDriver driver, String locator) {
 		WebElement element = getElement(driver, locator);
 		return element.getText();
 	}
 
+	public String getElementText(WebDriver driver, String locator, String... values) {
+		WebElement element = getElement(driver, getDynamicLocator(locator, values));
+		return element.getText();
+	}
+	
 	public int countElementSize(WebDriver driver, String locator) {
 		return getElements(driver, locator).size();
 	}
 	
-	public void checktoCheckbox(WebDriver driver, String locator) {
+
+	public int countElementSize(WebDriver driver, String locator, String... values) {
+		return getElements(driver, getDynamicLocator(locator, values)).size();
+	}
+	
+	public void checkToCheckbox(WebDriver driver, String locator) {
 		WebElement element = getElement(driver, locator);
 		if(!element.isSelected()) {
 			element.click();
 		}
 	}
 	
-	public void unchecktoCheckbox(WebDriver driver, String locator) {
+	public void checkToCheckbox(WebDriver driver, String locator, String... values) {
+		WebElement element = getElement(driver, getDynamicLocator(locator, values));
+		if(!element.isSelected()) {
+			element.click();
+		}
+	}
+	
+	public void uncheckToCheckbox(WebDriver driver, String locator) {
 		WebElement element = getElement(driver, locator);
 		if(element.isSelected()) {
+			element.click();
+		}
+	}
+	
+	public void checkToUncheckbox(WebDriver driver, String locator, String... values) {
+		WebElement element = getElement(driver, getDynamicLocator(locator, values));
+		if(!element.isSelected()) {
 			element.click();
 		}
 	}
@@ -416,40 +440,40 @@ public class AbstractPage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator, values))));
 	}
 	
-	public SearchPageObject openSearch(WebDriver driver) {
+	public UserSearchPageObject openSearch(WebDriver driver) {
 		waitToElementClickable(driver, AbstractPageUI.SEARCH_LINK);		
 		clickToElement(driver, AbstractPageUI.SEARCH_LINK);
-		return PageGeneratorManager.getSearchPage(driver);
+		return PageGeneratorManager.getUserSearchPage(driver);
 	}
 
-	public ShippingAndReturnPageObject openShippingAndReturn(WebDriver driver) {
+	public UserShippingAndReturnPageObject openShippingAndReturn(WebDriver driver) {
 		waitToElementClickable(driver, AbstractPageUI.SHIPPING_AND_RETURN_LINK);		
 		clickToElement(driver, AbstractPageUI.SHIPPING_AND_RETURN_LINK);
-		return PageGeneratorManager.getShippingAndReturnPage(driver);
+		return PageGeneratorManager.getUserShippingAndReturnPage(driver);
 	}
 	
-	public SitemapPageObject openSitemap(WebDriver driver) {
+	public UserSitemapPageObject openSitemap(WebDriver driver) {
 		waitToElementClickable(driver, AbstractPageUI.SITEMAP_LINK);		
 		clickToElement(driver, AbstractPageUI.SITEMAP_LINK);
-		return PageGeneratorManager.getSitemapPage(driver);
+		return PageGeneratorManager.getUserSitemapPage(driver);
 	}
 	
-	public CustomerInforPageObject openMyAccount(WebDriver driver) {
+	public UserCustomerInforPageObject openMyAccount(WebDriver driver) {
 		waitToElementClickable(driver, AbstractPageUI.MY_ACCOUNT_LINK);		
 		clickToElement(driver, AbstractPageUI.MY_ACCOUNT_LINK);
-		return PageGeneratorManager.getCustomerInforPage(driver);
+		return PageGeneratorManager.getUserCustomerInforPage(driver);
 	}
 	
-	public HomePageObject openHomePage(WebDriver driver) {
+	public UserHomePageObject openHomePage(WebDriver driver) {
 		waitToElementClickable(driver, AbstractPageUI.HOMEPAGE_LINK);		
 		clickToElement(driver, AbstractPageUI.HOMEPAGE_LINK);
-		return PageGeneratorManager.getHomePage(driver);
+		return PageGeneratorManager.getUserHomePage(driver);
 	}
 
-	public WishListPageObject openWishList(WebDriver driver) {
+	public UserWishListPageObject openWishList(WebDriver driver) {
 		waitToElementClickable(driver, AbstractPageUI.WISH_LIST_LINK);		
 		clickToElement(driver, AbstractPageUI.WISH_LIST_LINK);
-		return PageGeneratorManager.getWishListPage(driver);
+		return PageGeneratorManager.getUserWishListPage(driver);
 	}
 
 	public AbstractPage openLinkByPageName(WebDriver driver, String pageName) {
@@ -458,13 +482,13 @@ public class AbstractPage {
 		
 		switch (pageName) {
 		case "Search":
-			return PageGeneratorManager.getSearchPage(driver);
+			return PageGeneratorManager.getUserSearchPage(driver);
 		case "Shipping & returns":
-			return PageGeneratorManager.getShippingAndReturnPage(driver);
+			return PageGeneratorManager.getUserShippingAndReturnPage(driver);
 		case "Sitemap":
-			return PageGeneratorManager.getSitemapPage(driver);
+			return PageGeneratorManager.getUserSitemapPage(driver);
 		default:
-			return PageGeneratorManager.getCustomerInforPage(driver);
+			return PageGeneratorManager.getUserCustomerInforPage(driver);
 		}
 	}
 	
