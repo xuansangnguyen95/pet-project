@@ -19,6 +19,7 @@ public class Level10_Upload_file extends AbstractTest {
 	AdminLoginPageObject loginPage;
 	AdminDashboardPageObject dashboardPage;
 	AdminProductPageObject productPage;
+	String fileNames = "1.JPG";
 	
 	@Parameters(value = {"browser", "url"})
 	@BeforeClass
@@ -35,7 +36,45 @@ public class Level10_Upload_file extends AbstractTest {
 
 	@Test
 	public void TC01_Upload() {
-
+		productPage.inputToProductNameTextbox("$100 Physical Gift Card");
+		
+		productPage.clickToSearchButton();
+		
+		productPage.clickToEditProductDetail("$100 Physical Gift Card");
+		
+		productPage.scrollToPicturePane();
+		
+		productPage.uploadFileByPanelID(driver, "product-pictures", fileNames);
+//		productPage.inputToAltTextbox();
+//		productPage.inputToTitleTextbox();
+//		productPage.inputToOrderTextbox();
+//		
+//	    productPage.clickToAddProductPictureButton();
+//	    
+//	    Assert.assertTrue(productPage.areImageDetailsDisplayed("", "", "", ""));
+//	    
+//	    productPage.clickToSaveButton();
+//	    
+//		productPage.inputToProductNameTextbox("$100 Physical Gift Card");
+//		
+//		productPage.clickToSearchButton();
+//		
+//		Assert.assertTrue(productPage.areProductDisplayed("", "", "", "", "", "", ""));
+//		
+//		productPage.clickToEditProductDetail("$100 Physical Gift Card");
+//		
+//		productPage.scrollToPicturePane();
+//		
+//		productPage.clickToDeleteButton();
+//		
+//		productPage.clickToSaveButton();
+//		
+//		productPage.inputToProductNameTextbox("$100 Physical Gift Card");
+//		
+//		productPage.clickToSearchButton();
+//		
+//		Assert.assertTrue(productPage.areProductDisplayed("", "", "", "", "", "", ""));
+//		
 	}
 	
 	

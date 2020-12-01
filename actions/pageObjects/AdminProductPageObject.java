@@ -86,6 +86,63 @@ public class AdminProductPageObject extends AbstractPage {
 		clickToElement(driver, AdminProductPageUI.EDIT_ICON, productName);
 		waitAjaxLoadingInvisible();
 	}
+
+	public void inputToProductNameTextbox(String productName) {
+		waitToElementVisible(driver, AdminProductPageUI.PRODUCT_NAME_TEXTBOX);
+		sendKeysToElement(driver, AdminProductPageUI.PRODUCT_NAME_TEXTBOX, productName);
+	}
+
+	public void clickToSearchButton() {
+		waitToElementClickable(driver, AdminProductPageUI.SEARCH_PRODUCT_BUTTON);
+		clickToElement(driver, AdminProductPageUI.SEARCH_PRODUCT_BUTTON);
+		waitAjaxLoadingInvisible();
+	}
+
+	public void scrollToPicturePane() {
+		scrollToElement(driver, AdminProductPageUI.PICTURE_PANEL);
+		clickToElement(driver, AdminProductPageUI.PICTURE_PANEL);
+	}
+
+	public void inputToAltTextbox() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void inputToTitleTextbox() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void inputToOrderTextbox() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void clickToAddProductPictureButton() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public boolean areImageDetailsDisplayed(String string, String string2, String string3, String string4) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void clickToSaveButton() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public boolean areProductDisplayed(String string, String string2, String string3, String string4, String string5,
+			String string6, String string7) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void clickToDeleteButton() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	

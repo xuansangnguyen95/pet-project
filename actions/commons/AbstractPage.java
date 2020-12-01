@@ -152,7 +152,7 @@ public class AbstractPage {
 
 	public void sendKeysToElement(WebDriver driver, String locator, String value, String... values) {
 		WebElement element = getElement(driver, getDynamicLocator(locator, values));
-		element.clear();
+		//element.clear();
 		sleepInMilisecond(500);
 		element.sendKeys(value);
 	}
@@ -357,6 +357,7 @@ public class AbstractPage {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		WebElement element = getElement(driver, locator);
 		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
+		sleepInMilisecond(1000);
 	}
 
 	public void sendkeyToElementByJS(WebDriver driver, String locator, String value) {
@@ -498,7 +499,16 @@ public class AbstractPage {
 		
 	}
 	
-	
+	public void uploadFileByPanelID(WebDriver driver, String panelID, String... fileNames) {
+		String filePath = GlobalConstants.UPLOAD_FOLDER;
+		String fullFileName = "";
+		for(String file : fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+		
+		fullFileName = fullFileName.trim();
+		sendKeysToElement(driver, AbstractPageUI.UPLOAD_FILE_TYPE_BY_PANEL, fullFileName, panelID);
+	}
 	
 	
 	

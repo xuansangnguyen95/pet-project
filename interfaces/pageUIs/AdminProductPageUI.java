@@ -17,5 +17,8 @@ public class AdminProductPageUI {
 	public static final String PUBLISH_STATUS_BY_COLUMN_AND_ROW = "//tr[%s]/td[%s]/i";
 	public static final String EDIT_ICON = "//td[text()='%s']/following-sibling::td/a";
 	
+	public static final String PRODUCT_NAME_TEXTBOX = "//input[@id='SearchProductName']";
+	public static final String SEARCH_PRODUCT_BUTTON = "//button[@id='search-products']";
+	public static final String PICTURE_PANEL = "//div[@id='product-pictures']";
 	
 }
