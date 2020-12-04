@@ -103,45 +103,54 @@ public class AdminProductPageObject extends AbstractPage {
 		clickToElement(driver, AdminProductPageUI.PICTURE_PANEL);
 	}
 
-	public void inputToAltTextbox() {
-		// TODO Auto-generated method stub
-		
+	public void inputToAltTextbox(String imageDescription) {
+		waitToElementVisible(driver, AdminProductPageUI.ALT_TEXTBOX);
+		sendKeysToElement(driver, AdminProductPageUI.ALT_TEXTBOX, imageDescription);
 	}
 
-	public void inputToTitleTextbox() {
-		// TODO Auto-generated method stub
-		
+	public void inputToTitleTextbox(String imageTitle) {
+		waitToElementVisible(driver, AdminProductPageUI.TITLE_TEXTBOX);
+		sendKeysToElement(driver, AdminProductPageUI.TITLE_TEXTBOX, imageTitle);
 	}
 
-	public void inputToOrderTextbox() {
-		// TODO Auto-generated method stub
-		
+	public void clickUpArrowInOrderTextbox(String imageOrder) {
+		waitToElementClickable(driver, AdminProductPageUI.UP_ARROW_IN_ORDER_TEXTBOX);
+		clickToElement(driver, AdminProductPageUI.UP_ARROW_IN_ORDER_TEXTBOX);
 	}
 
 	public void clickToAddProductPictureButton() {
-		// TODO Auto-generated method stub
-		
+		waitToElementClickable(driver, AdminProductPageUI.ADD_PRODUCT_PICTURE_BUTTON);
+		clickToElement(driver, AdminProductPageUI.ADD_PRODUCT_PICTURE_BUTTON);
+		waitAjaxLoadingInvisible();
 	}
 
-	public boolean areImageDetailsDisplayed(String string, String string2, String string3, String string4) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean areImageDetailsDisplayed(String productName, String pictureOrder, String pictureAlt, String pictureTitle) {
+		waitToElementVisible(driver, AdminProductPageUI.UPLOADED_PICTURE_DETAIL, productName, pictureOrder, pictureAlt, pictureTitle);
+		return isElementDisplayed(driver, AdminProductPageUI.UPLOADED_PICTURE_DETAIL, productName, pictureOrder, pictureAlt, pictureTitle);
 	}
 
 	public void clickToSaveButton() {
-		// TODO Auto-generated method stub
-		
+		waitToElementClickable(driver, AdminProductPageUI.SAVE_BUTTON);
+		clickToElement(driver, AdminProductPageUI.SAVE_BUTTON);
+		waitAjaxLoadingInvisible();
 	}
 
-	public boolean areProductDisplayed(String string, String string2, String string3, String string4, String string5,
-			String string6, String string7) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean areProductDisplayed(String pictureName, String productName, String productSKU, String productPrice, String productQuantity, String productType, String productPublishStatus) {
+		waitToElementVisible(driver, AdminProductPageUI.PRODUCT_DETAIL, pictureName, productName, productSKU, productPrice, productQuantity, productType, productPublishStatus);
+		return isElementDisplayed(driver, AdminProductPageUI.PRODUCT_DETAIL, pictureName, productName, productSKU, productPrice, productQuantity, productType, productPublishStatus);
 	}
 
-	public void clickToDeleteButton() {
-		// TODO Auto-generated method stub
-		
+	public void clickToDeleteButtonByPictureName(String pictureTitle) {
+		waitToElementClickable(driver, AdminProductPageUI.DELETE_BUTTON_BY_PRODUCT_TITLE, pictureTitle);
+		clickToElement(driver, AdminProductPageUI.DELETE_BUTTON_BY_PRODUCT_TITLE, pictureTitle);
+		waitAlertPresence(driver);
+		acceptAlert(driver);
+		waitAjaxLoadingInvisible();
+	}
+
+	public boolean isNewPictureUploadSuccess(String fileNames) {
+		waitToElementInvisible(driver, AdminProductPageUI.SPINNER_UPLOAD);
+		return isElementDisplayed(driver, AdminProductPageUI.FILENAME_UPLOAD, fileNames);
 	}
 	
 	

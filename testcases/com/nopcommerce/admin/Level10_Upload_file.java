@@ -19,7 +19,19 @@ public class Level10_Upload_file extends AbstractTest {
 	AdminLoginPageObject loginPage;
 	AdminDashboardPageObject dashboardPage;
 	AdminProductPageObject productPage;
-	String fileNames = "1.JPG";
+	
+	String fileName = "1.JPG";
+	String productName = "Apple iCam";
+	String productSKU = "APPLE_CAM";
+	String productPrice = "1300";
+	String productQuantity = "10000";
+	String productType = "Simple";
+	String productPublishStatus = "true";
+	
+	String pictureName = productName.toLowerCase().replace(" ", "-");
+	String pictureAlt = "Alt";
+	String pictureTitle = "Title";
+	String pictureOrder = "1";
 	
 	@Parameters(value = {"browser", "url"})
 	@BeforeClass
@@ -36,45 +48,47 @@ public class Level10_Upload_file extends AbstractTest {
 
 	@Test
 	public void TC01_Upload() {
-		productPage.inputToProductNameTextbox("$100 Physical Gift Card");
+		productPage.inputToProductNameTextbox(productName);
 		
 		productPage.clickToSearchButton();
 		
-		productPage.clickToEditProductDetail("$100 Physical Gift Card");
+		productPage.clickToEditProductDetail(productName);
 		
 		productPage.scrollToPicturePane();
 		
-		productPage.uploadFileByPanelID(driver, "product-pictures", fileNames);
-//		productPage.inputToAltTextbox();
-//		productPage.inputToTitleTextbox();
-//		productPage.inputToOrderTextbox();
-//		
-//	    productPage.clickToAddProductPictureButton();
-//	    
-//	    Assert.assertTrue(productPage.areImageDetailsDisplayed("", "", "", ""));
-//	    
-//	    productPage.clickToSaveButton();
-//	    
-//		productPage.inputToProductNameTextbox("$100 Physical Gift Card");
-//		
-//		productPage.clickToSearchButton();
-//		
-//		Assert.assertTrue(productPage.areProductDisplayed("", "", "", "", "", "", ""));
-//		
-//		productPage.clickToEditProductDetail("$100 Physical Gift Card");
-//		
-//		productPage.scrollToPicturePane();
-//		
-//		productPage.clickToDeleteButton();
-//		
-//		productPage.clickToSaveButton();
-//		
-//		productPage.inputToProductNameTextbox("$100 Physical Gift Card");
-//		
-//		productPage.clickToSearchButton();
-//		
-//		Assert.assertTrue(productPage.areProductDisplayed("", "", "", "", "", "", ""));
-//		
+		productPage.uploadFileByPanelID(driver, "product-pictures", fileName);
+		
+		Assert.assertTrue(productPage.isNewPictureUploadSuccess(fileName));
+		productPage.inputToAltTextbox(pictureAlt);
+		productPage.inputToTitleTextbox(pictureTitle);
+		productPage.clickUpArrowInOrderTextbox(pictureOrder);
+		
+	    productPage.clickToAddProductPictureButton();
+	    
+	    Assert.assertTrue(productPage.areImageDetailsDisplayed(pictureName, pictureOrder, pictureAlt, pictureTitle));
+	    
+	    productPage.clickToSaveButton();
+	    
+		productPage.inputToProductNameTextbox(productName);
+		
+		productPage.clickToSearchButton();
+		
+		Assert.assertTrue(productPage.areProductDisplayed(pictureName, productName, productSKU, productPrice, productQuantity, productType, productPublishStatus));
+		
+		productPage.clickToEditProductDetail(productName);
+		
+		productPage.scrollToPicturePane();
+		
+		productPage.clickToDeleteButtonByPictureName(pictureTitle);
+		
+		productPage.clickToSaveButton();
+		
+		productPage.inputToProductNameTextbox(productName);
+		
+		productPage.clickToSearchButton();
+		
+		Assert.assertTrue(productPage.areProductDisplayed(pictureName, productName, productSKU, productPrice, productQuantity, productType, productPublishStatus));
+		
 	}
 	
 	
