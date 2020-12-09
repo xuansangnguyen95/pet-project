@@ -41,6 +41,24 @@ public class UserHomePageObject extends AbstractPage {
 		return PageGeneratorManager.getUserCustomerInforPage(driver);
 	}
 
+	public boolean isRegisterLinkDisplayed() {
+		return isElementDisplayed(driver, UserHomePageUI.REGISTER_LINK);
+	}
+
+	public boolean isLoginLinkDisplayed() {
+		return isElementDisplayed(driver, UserHomePageUI.LOGIN_LINK);
+	}
+
+	public boolean isRegisterLinkUndisplayed() {
+		waitToElementInvisible(driver, UserHomePageUI.REGISTER_LINK);
+		return isElementUndisplayed(driver, UserHomePageUI.REGISTER_LINK);
+	}
+
+	public boolean isLoginLinkUndisplayed() {
+		waitToElementInvisible(driver, UserHomePageUI.LOGIN_LINK);
+		return isElementUndisplayed(driver, UserHomePageUI.LOGIN_LINK);
+	}
+
 
 
 }
