@@ -1,40 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Nop Commerce" parallel="false">
 
-  <test name="Run on Firefox">
-  <parameter name="browser" value="firefox"/>
-    <classes>
-<!--       <class name="com.nopcommerce.users.Register_Login_Page_Object_level05_Page_Generator_Manager"/> -->
-      <class name="com.nopcommerce.users.Level11_Register_Login_Page_Element_Undisplayed"/>
-    </classes>
-  </test> 
-  
-<!--   <test name="Run on Chrome"> -->
-<!--     <parameter name="browser" value="chrome"/> -->
-<!--     <classes> -->
-<!--       <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/> -->
-<!--     </classes> -->
-<!--   </test> -->
-  
-<!--   <test name="Run on Firefox headless"> -->
-<!--     <parameter name="browser" value="firefox_headless"/> -->
-<!--     <classes> -->
-<!--       <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/> -->
-<!--     </classes> -->
-<!--   </test>  -->
-  
-<!--   <test name="Run on Chrome headless"> -->
-<!--     <parameter name="browser" value="chrome_headless"/> -->
-<!--     <classes> -->
-<!--       <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/> -->
-<!--     </classes> -->
-<!--   </test>  -->
-  
-<!--   <test name="Run on Edge Chromium"> -->
-<!--     <parameter name="browser" value="edge_chromium"/> -->
-<!--     <classes> -->
-<!--       <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/> -->
-<!--     </classes> -->
-<!--   </test>  -->
-  
+	<listeners>
+		<listener class-name="commons.MethodListener" />
+	</listeners>
+
+	<test name="Run on Firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<!-- <class name="com.nopcommerce.users.Register_Login_Page_Object_level05_Page_Generator_Manager"/> -->
+<!-- 			<class -->
+<!-- 				name="com.nopcommerce.users.Level11_Register_Login_Page_Element_Undisplayed" /> -->
+			<class
+				name="com.nopcommerce.users.Level12_Register_Login_Assert_Verify" />
+		</classes>
+	</test>
+
+	<!-- <test name="Run on Chrome"> -->
+	<!-- <parameter name="browser" value="chrome"/> -->
+	<!-- <classes> -->
+	<!-- <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+
+	<!-- <test name="Run on Firefox headless"> -->
+	<!-- <parameter name="browser" value="firefox_headless"/> -->
+	<!-- <classes> -->
+	<!-- <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+
+	<!-- <test name="Run on Chrome headless"> -->
+	<!-- <parameter name="browser" value="chrome_headless"/> -->
+	<!-- <classes> -->
+	<!-- <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+
+	<!-- <test name="Run on Edge Chromium"> -->
+	<!-- <parameter name="browser" value="edge_chromium"/> -->
+	<!-- <classes> -->
+	<!-- <class name="com.nopcommerce.users.Register_Login_Page_Object_level04"/> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+
 </suite> <!-- Suite -->
