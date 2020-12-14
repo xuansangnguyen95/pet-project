@@ -3,16 +3,17 @@
 
 	<listeners>
 		<listener class-name="commons.MethodListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 	</listeners>
 
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
 		<classes>
 			<!-- <class name="com.nopcommerce.users.Register_Login_Page_Object_level05_Page_Generator_Manager"/> -->
-<!-- 			<class -->
-<!-- 				name="com.nopcommerce.users.Level11_Register_Login_Page_Element_Undisplayed" /> -->
-			<class
-				name="com.nopcommerce.users.Level12_Register_Login_Assert_Verify" />
+<!-- 			<class name="com.nopcommerce.users.Level11_Register_Login_Page_Element_Undisplayed" /> -->
+<!-- 			<class name="com.nopcommerce.users.Level12_Register_Login_Assert_Verify" /> -->
+			<class name="com.nopcommerce.users.Level13_Register_Login_Report_HTML" />
 		</classes>
 	</test>
 
