@@ -52,3 +52,138 @@
 [INFO ] [2020-12-14 14:17:48,496] Login - Step 06: verify Logout link  displayed
 [INFO ] [2020-12-14 14:17:48,540] Login - Step 07: verify Register link undisplayed
 [INFO ] [2020-12-14 14:17:58,668] Login - Step 08: verify Login link undisplayed
+[INFO ] [2020-12-14 14:43:02,162] Register - Step 01: Open homepage
+[INFO ] [2020-12-14 14:43:02,167] Register - Step 02: Verify register link displayed
+[INFO ] [2020-12-14 14:43:02,219]  -------------------------- FAILED -------------------------- 
+[INFO ] [2020-12-14 14:43:02,221] Register - Step 03: Verify login link displayed
+[INFO ] [2020-12-14 14:43:02,247]  -------------------------- FAILED -------------------------- 
+[INFO ] [2020-12-14 14:43:02,247] Register - Step 04: click register link at hompage
+[INFO ] [2020-12-14 14:43:03,741] Register - Step 05: click to gender male radio button
+[INFO ] [2020-12-14 14:43:04,013] Register - Step 06: input to Firstname textbox with value: john
+[INFO ] [2020-12-14 14:43:04,572] Register - Step 07: input to Lastname textbox with value: gacy
+[INFO ] [2020-12-14 14:43:05,122] Register - Step 08: select date dropdown
+[INFO ] [2020-12-14 14:43:05,435] Register - Step 09: select month dropdown
+[INFO ] [2020-12-14 14:43:05,699] Register - Step 10: select year dropdown
+[INFO ] [2020-12-14 14:43:05,981] Register - Step 11: input to Email textbox with value: johngacy389@gmail.com
+[INFO ] [2020-12-14 14:43:06,567] Register - Step 12: input to CompanyName textbox
+[INFO ] [2020-12-14 14:43:07,117] Register - Step 13: input to Password textbox with value: johngacy
+[INFO ] [2020-12-14 14:43:08,265] Register - Step 14: click to Register button at Register page
+[INFO ] [2020-12-14 14:43:09,257] Register - Step 15: verify success message displayed
+[INFO ] [2020-12-14 14:43:09,313]  -------------------------- PASSED -------------------------- 
+[INFO ] [2020-12-14 14:43:09,314] Register - Step 16: click to logout link and navigate to homepage
+[INFO ] [2020-12-14 14:43:11,854] Login - Step 01: open login page
+[INFO ] [2020-12-14 14:43:12,394] Login - Step 02: input to Email textbox with value: johngacy389@gmail.com
+[INFO ] [2020-12-14 14:43:12,996] Login - Step 03: input to Password textbox with value: johngacy
+[INFO ] [2020-12-14 14:43:13,566] Login - Step 04: click to Login button at Login page
+[INFO ] [2020-12-14 14:43:14,459] Login - Step 05: verify My Account link displayed
+[INFO ] [2020-12-14 14:43:14,525] Login - Step 06: verify Logout link  displayed
+[INFO ] [2020-12-14 14:43:14,576] Login - Step 07: verify Register link undisplayed
+[INFO ] [2020-12-14 14:43:24,619] Login - Step 08: verify Login link undisplayed
+[INFO ] [2020-12-14 14:45:25,953] Register - Step 01: Open homepage
+[INFO ] [2020-12-14 14:45:25,957] Register - Step 02: Verify register link displayed
+[INFO ] [2020-12-14 14:45:26,004]  -------------------------- FAILED -------------------------- 
+[INFO ] [2020-12-14 14:45:26,006] Register - Step 03: Verify login link displayed
+[INFO ] [2020-12-14 14:45:26,034]  -------------------------- FAILED -------------------------- 
+[INFO ] [2020-12-14 14:45:26,034] Register - Step 04: click register link at hompage
+[INFO ] [2020-12-14 14:45:26,622] Register - Step 05: click to gender male radio button
+[INFO ] [2020-12-14 14:45:26,881] Register - Step 06: input to Firstname textbox with value: john
+[INFO ] [2020-12-14 14:45:27,452] Register - Step 07: input to Lastname textbox with value: gacy
+[INFO ] [2020-12-14 14:45:28,007] Register - Step 08: select date dropdown
+[INFO ] [2020-12-14 14:45:28,278] Register - Step 09: select month dropdown
+[INFO ] [2020-12-14 14:45:28,546] Register - Step 10: select year dropdown
+[INFO ] [2020-12-14 14:45:28,839] Register - Step 11: input to Email textbox with value: johngacy782@gmail.com
+[INFO ] [2020-12-14 14:45:29,432] Register - Step 12: input to CompanyName textbox
+[INFO ] [2020-12-14 14:45:29,987] Register - Step 13: input to Password textbox with value: johngacy
+[INFO ] [2020-12-14 14:45:31,104] Register - Step 14: click to Register button at Register page
+[INFO ] [2020-12-14 14:45:32,773] Register - Step 15: verify success message displayed
+[INFO ] [2020-12-14 14:45:32,823]  -------------------------- PASSED -------------------------- 
+[INFO ] [2020-12-14 14:45:32,823] Register - Step 16: click to logout link and navigate to homepage
+[INFO ] [2020-12-14 14:45:34,415] Login - Step 01: open login page
+[INFO ] [2020-12-14 14:45:35,682] Login - Step 02: input to Email textbox with value: johngacy782@gmail.com
+[INFO ] [2020-12-14 14:45:36,290] Login - Step 03: input to Password textbox with value: johngacy
+[INFO ] [2020-12-14 14:45:36,845] Login - Step 04: click to Login button at Login page
+[INFO ] [2020-12-14 14:45:37,699] Login - Step 05: verify My Account link displayed
+[INFO ] [2020-12-14 14:45:37,776] Login - Step 06: verify Logout link  displayed
+[INFO ] [2020-12-14 14:45:37,822] Login - Step 07: verify Register link undisplayed
+[INFO ] [2020-12-14 14:45:47,880] Login - Step 08: verify Login link undisplayed
+[INFO ] [2020-12-14 14:47:42,417] Register - Step 01: Open homepage
+[INFO ] [2020-12-14 14:47:42,422] Register - Step 02: Verify register link displayed
+[INFO ] [2020-12-14 14:47:42,468]  -------------------------- FAILED -------------------------- 
+[INFO ] [2020-12-14 14:47:42,470] Register - Step 03: Verify login link displayed
+[INFO ] [2020-12-14 14:47:42,494]  -------------------------- FAILED -------------------------- 
+[INFO ] [2020-12-14 14:47:42,494] Register - Step 04: click register link at hompage
+[INFO ] [2020-12-14 14:47:44,020] Register - Step 05: click to gender male radio button
+[INFO ] [2020-12-14 14:47:44,284] Register - Step 06: input to Firstname textbox with value: john
+[INFO ] [2020-12-14 14:47:44,865] Register - Step 07: input to Lastname textbox with value: gacy
+[INFO ] [2020-12-14 14:47:45,423] Register - Step 08: select date dropdown
+[INFO ] [2020-12-14 14:47:45,697] Register - Step 09: select month dropdown
+[INFO ] [2020-12-14 14:47:45,990] Register - Step 10: select year dropdown
+[INFO ] [2020-12-14 14:47:46,296] Register - Step 11: input to Email textbox with value: johngacy814@gmail.com
+[INFO ] [2020-12-14 14:47:46,889] Register - Step 12: input to CompanyName textbox
+[INFO ] [2020-12-14 14:47:47,451] Register - Step 13: input to Password textbox with value: johngacy
+[INFO ] [2020-12-14 14:47:48,567] Register - Step 14: click to Register button at Register page
+[INFO ] [2020-12-14 14:47:50,180] Register - Step 15: verify success message displayed
+[INFO ] [2020-12-14 14:47:50,234]  -------------------------- PASSED -------------------------- 
+[INFO ] [2020-12-14 14:47:50,235] Register - Step 16: click to logout link and navigate to homepage
+[INFO ] [2020-12-14 14:47:51,866] Login - Step 01: open login page
+[INFO ] [2020-12-14 14:47:52,350] Login - Step 02: input to Email textbox with value: johngacy814@gmail.com
+[INFO ] [2020-12-14 14:47:52,945] Login - Step 03: input to Password textbox with value: johngacy
+[INFO ] [2020-12-14 14:47:53,502] Login - Step 04: click to Login button at Login page
+[INFO ] [2020-12-14 14:47:54,352] Login - Step 05: verify My Account link displayed
+[INFO ] [2020-12-14 14:47:54,416] Login - Step 06: verify Logout link  displayed
+[INFO ] [2020-12-14 14:47:54,462] Login - Step 07: verify Register link undisplayed
+[INFO ] [2020-12-14 14:48:04,514] Login - Step 08: verify Login link undisplayed
+[INFO ] [2020-12-14 14:49:06,962] Register - Step 01: Open homepage
+[INFO ] [2020-12-14 14:49:06,966] Register - Step 02: Verify register link displayed
+[INFO ] [2020-12-14 14:49:07,012]  -------------------------- FAILED -------------------------- 
+[INFO ] [2020-12-14 14:49:07,015] Register - Step 03: Verify login link displayed
+[INFO ] [2020-12-14 14:49:07,041]  -------------------------- FAILED -------------------------- 
+[INFO ] [2020-12-14 14:49:07,041] Register - Step 04: click register link at hompage
+[INFO ] [2020-12-14 14:49:08,493] Register - Step 05: click to gender male radio button
+[INFO ] [2020-12-14 14:49:08,752] Register - Step 06: input to Firstname textbox with value: john
+[INFO ] [2020-12-14 14:49:09,321] Register - Step 07: input to Lastname textbox with value: gacy
+[INFO ] [2020-12-14 14:49:09,881] Register - Step 08: select date dropdown
+[INFO ] [2020-12-14 14:49:10,193] Register - Step 09: select month dropdown
+[INFO ] [2020-12-14 14:49:10,484] Register - Step 10: select year dropdown
+[INFO ] [2020-12-14 14:49:10,795] Register - Step 11: input to Email textbox with value: johngacy468@gmail.com
+[INFO ] [2020-12-14 14:49:11,370] Register - Step 12: input to CompanyName textbox
+[INFO ] [2020-12-14 14:49:11,925] Register - Step 13: input to Password textbox with value: johngacy
+[INFO ] [2020-12-14 14:49:13,030] Register - Step 14: click to Register button at Register page
+[INFO ] [2020-12-14 14:49:15,456] Register - Step 15: verify success message displayed
+[INFO ] [2020-12-14 14:49:15,511]  -------------------------- PASSED -------------------------- 
+[INFO ] [2020-12-14 14:49:15,511] Register - Step 16: click to logout link and navigate to homepage
+[INFO ] [2020-12-14 14:49:16,355] Login - Step 01: open login page
+[INFO ] [2020-12-14 14:49:16,858] Login - Step 02: input to Email textbox with value: johngacy468@gmail.com
+[INFO ] [2020-12-14 14:49:17,456] Login - Step 03: input to Password textbox with value: johngacy
+[INFO ] [2020-12-14 14:49:18,026] Login - Step 04: click to Login button at Login page
+[INFO ] [2020-12-14 14:49:18,895] Login - Step 05: verify My Account link displayed
+[INFO ] [2020-12-14 14:49:18,962] Login - Step 06: verify Logout link  displayed
+[INFO ] [2020-12-14 14:49:19,005] Login - Step 07: verify Register link undisplayed
+[INFO ] [2020-12-14 14:49:29,055] Login - Step 08: verify Login link undisplayed
+[INFO ] [2020-12-14 16:28:18,026] Register - Step 01: Open homepage
+[INFO ] [2020-12-14 16:28:18,028] Register - Step 02: Verify register link displayed
+[INFO ] [2020-12-14 16:28:18,068]  -------------------------- FAILED -------------------------- 
+[INFO ] [2020-12-14 16:28:18,071] Register - Step 03: Verify login link displayed
+[INFO ] [2020-12-14 16:28:18,095]  -------------------------- FAILED -------------------------- 
+[INFO ] [2020-12-14 16:28:18,095] Register - Step 04: click register link at hompage
+[INFO ] [2020-12-14 16:28:19,563] Register - Step 05: click to gender male radio button
+[INFO ] [2020-12-14 16:28:19,831] Register - Step 06: input to Firstname textbox with value: john
+[INFO ] [2020-12-14 16:28:20,398] Register - Step 07: input to Lastname textbox with value: gacy
+[INFO ] [2020-12-14 16:28:20,955] Register - Step 08: select date dropdown
+[INFO ] [2020-12-14 16:28:21,232] Register - Step 09: select month dropdown
+[INFO ] [2020-12-14 16:28:21,507] Register - Step 10: select year dropdown
+[INFO ] [2020-12-14 16:28:21,786] Register - Step 11: input to Email textbox with value: johngacy49@gmail.com
+[INFO ] [2020-12-14 16:28:22,357] Register - Step 12: input to CompanyName textbox
+[INFO ] [2020-12-14 16:28:22,929] Register - Step 13: input to Password textbox with value: johngacy
+[INFO ] [2020-12-14 16:28:24,035] Register - Step 14: click to Register button at Register page
+[INFO ] [2020-12-14 16:28:26,415] Register - Step 15: verify success message displayed
+[INFO ] [2020-12-14 16:28:26,463]  -------------------------- PASSED -------------------------- 
+[INFO ] [2020-12-14 16:28:26,463] Register - Step 16: click to logout link and navigate to homepage
+[INFO ] [2020-12-14 16:28:28,293] Login - Step 01: open login page
+[INFO ] [2020-12-14 16:28:28,758] Login - Step 02: input to Email textbox with value: johngacy49@gmail.com
+[INFO ] [2020-12-14 16:28:29,350] Login - Step 03: input to Password textbox with value: johngacy
+[INFO ] [2020-12-14 16:28:29,906] Login - Step 04: click to Login button at Login page
+[INFO ] [2020-12-14 16:28:30,876] Login - Step 05: verify My Account link displayed
+[INFO ] [2020-12-14 16:28:30,945] Login - Step 06: verify Logout link  displayed
+[INFO ] [2020-12-14 16:28:30,995] Login - Step 07: verify Register link undisplayed
+[INFO ] [2020-12-14 16:28:41,044] Login - Step 08: verify Login link undisplayed
