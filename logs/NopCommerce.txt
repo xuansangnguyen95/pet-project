@@ -1,27 +1,21 @@
-[INFO ] [2020-12-14 16:28:18,026] Register - Step 01: Open homepage
-[INFO ] [2020-12-14 16:28:18,028] Register - Step 02: Verify register link displayed
-[INFO ] [2020-12-14 16:28:18,068]  -------------------------- FAILED -------------------------- 
-[INFO ] [2020-12-14 16:28:18,071] Register - Step 03: Verify login link displayed
-[INFO ] [2020-12-14 16:28:18,095]  -------------------------- FAILED -------------------------- 
-[INFO ] [2020-12-14 16:28:18,095] Register - Step 04: click register link at hompage
-[INFO ] [2020-12-14 16:28:19,563] Register - Step 05: click to gender male radio button
-[INFO ] [2020-12-14 16:28:19,831] Register - Step 06: input to Firstname textbox with value: john
-[INFO ] [2020-12-14 16:28:20,398] Register - Step 07: input to Lastname textbox with value: gacy
-[INFO ] [2020-12-14 16:28:20,955] Register - Step 08: select date dropdown
-[INFO ] [2020-12-14 16:28:21,232] Register - Step 09: select month dropdown
-[INFO ] [2020-12-14 16:28:21,507] Register - Step 10: select year dropdown
-[INFO ] [2020-12-14 16:28:21,786] Register - Step 11: input to Email textbox with value: johngacy49@gmail.com
-[INFO ] [2020-12-14 16:28:22,357] Register - Step 12: input to CompanyName textbox
-[INFO ] [2020-12-14 16:28:22,929] Register - Step 13: input to Password textbox with value: johngacy
-[INFO ] [2020-12-14 16:28:24,035] Register - Step 14: click to Register button at Register page
-[INFO ] [2020-12-14 16:28:26,415] Register - Step 15: verify success message displayed
-[INFO ] [2020-12-14 16:28:26,463]  -------------------------- PASSED -------------------------- 
-[INFO ] [2020-12-14 16:28:26,463] Register - Step 16: click to logout link and navigate to homepage
-[INFO ] [2020-12-14 16:28:28,293] Login - Step 01: open login page
-[INFO ] [2020-12-14 16:28:28,758] Login - Step 02: input to Email textbox with value: johngacy49@gmail.com
-[INFO ] [2020-12-14 16:28:29,350] Login - Step 03: input to Password textbox with value: johngacy
-[INFO ] [2020-12-14 16:28:29,906] Login - Step 04: click to Login button at Login page
-[INFO ] [2020-12-14 16:28:30,876] Login - Step 05: verify My Account link displayed
-[INFO ] [2020-12-14 16:28:30,945] Login - Step 06: verify Logout link  displayed
-[INFO ] [2020-12-14 16:28:30,995] Login - Step 07: verify Register link undisplayed
-[INFO ] [2020-12-14 16:28:41,044] Login - Step 08: verify Login link undisplayed
+[INFO ] [2020-12-18 00:12:31,196] Register - Step 01: Open homepage
+[INFO ] [2020-12-18 00:12:31,198] Register - Step 04: click register link at hompage
+[INFO ] [2020-12-18 00:12:31,808] Register - Step 05: click to gender male radio button
+[INFO ] [2020-12-18 00:12:32,067] Register - Step 06: input to Firstname textbox with value: john
+[INFO ] [2020-12-18 00:12:32,642] Register - Step 07: input to Lastname textbox with value: gacy
+[INFO ] [2020-12-18 00:12:33,202] Register - Step 08: select date dropdown with value: 21
+[INFO ] [2020-12-18 00:12:33,476] Register - Step 09: select month dropdown with value: August
+[INFO ] [2020-12-18 00:12:33,752] Register - Step 10: select year dropdown with value: 1999
+[INFO ] [2020-12-18 00:12:34,035] Register - Step 11: input to Email textbox with value: johngacy349@gmail.com
+[INFO ] [2020-12-18 00:12:34,609] Register - Step 12: input to CompanyName textbox
+[INFO ] [2020-12-18 00:12:35,167] Register - Step 13: input to Password textbox with value: johngacy
+[INFO ] [2020-12-18 00:12:36,275] Register - Step 14: click to Register button at Register page
+[INFO ] [2020-12-18 00:12:37,932] Register - Step 15: verify success message displayed
+[INFO ] [2020-12-18 00:12:37,985]  -------------------------- PASSED -------------------------- 
+[INFO ] [2020-12-18 00:12:37,985] Register - Step 16: click to logout link and navigate to homepage
+[INFO ] [2020-12-18 00:12:39,841] Login - Step 01: open login page
+[INFO ] [2020-12-18 00:12:41,036] Login - Step 02: input to Email textbox with value: johngacy349@gmail.com
+[INFO ] [2020-12-18 00:12:41,626] Login - Step 03: input to Password textbox with value: johngacy
+[INFO ] [2020-12-18 00:12:42,172] Login - Step 04: click to Login button at Login page
+[INFO ] [2020-12-18 00:12:43,064] OS name = windows 10
+[INFO ] [2020-12-18 00:12:43,746] ---------- QUIT BROWSER SUCCESS ----------
