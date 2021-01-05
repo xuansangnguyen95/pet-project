@@ -225,6 +225,8 @@ public class AbstractTest {
 		} catch (Exception e) {
 			log.info(e.getMessage());
 		}
+		
+		sleepInMilisecond(2000);
 	}
 
 	

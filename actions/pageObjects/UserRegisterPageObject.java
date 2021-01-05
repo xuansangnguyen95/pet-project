@@ -78,4 +78,9 @@ public class UserRegisterPageObject extends AbstractPage {
 		return PageGeneratorManager.getUserHomePage(driver);
 	}
 
+	public String getSummaryErrorMessage() {
+		waitToElementVisible(driver, UserRegisterPageUI.SUMMARY_ERROR);
+		return getElementText(driver, UserRegisterPageUI.SUMMARY_ERROR);
+	}
+
 }

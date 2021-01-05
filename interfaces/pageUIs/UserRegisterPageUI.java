@@ -15,4 +15,6 @@ public class UserRegisterPageUI {
 	public static final String REGISTER_SUCCESS_MESSAGE = "//div[@class='result']";
 	public static final String LOGOUT_LINK = "//a[@class='ico-logout']";
 	
+	public static final String SUMMARY_ERROR = "//div[@class='message-error validation-summary-errors']/ul/li";
+	
 }

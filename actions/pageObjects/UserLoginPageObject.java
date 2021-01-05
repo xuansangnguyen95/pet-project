@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
 import pageUIs.UserLoginPageUI;
+import pageUIs.UserRegisterPageUI;
 
 public class UserLoginPageObject extends AbstractPage {
 	WebDriver driver;
@@ -26,6 +27,11 @@ public class UserLoginPageObject extends AbstractPage {
 		waitToElementClickable(driver, UserLoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, UserLoginPageUI.LOGIN_BUTTON);
 		return PageGeneratorManager.getUserHomePage(driver);
+	}
+
+	public String getSummaryErrorMessage() {
+		waitToElementVisible(driver, UserLoginPageUI.SUMMARY_ERROR);
+		return getElementText(driver, UserLoginPageUI.SUMMARY_ERROR);
 	}
 
 }

@@ -559,6 +559,9 @@ public class AbstractPage {
 		selectItemInDropdown(driver, AbstractPageUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownName);
 	}
 	
-	
+	public String getTextErrorMessageByValue(WebDriver driver, String fieldValue) {
+		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_ERROR_MESSAGE, fieldValue);
+		return getElementText(driver, AbstractPageUI.DYNAMIC_ERROR_MESSAGE, fieldValue);
+	}
 	
 }

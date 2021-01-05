@@ -13,6 +13,9 @@ public class GlobalConstants {
 	public static final String DOWNLOAD_FOLDER = ROOT_FOLDER + getDirectorySlash("downloadFiles");
 	public static final String UPLOAD_FOLDER = ROOT_FOLDER + getDirectorySlash("uploadFiles");;
 	
+	public static final String DEMO_USER_PAGE = "https://demo.nopcommerce.com/";
+	public static final String DEMO_ADMIN_PAGE = "https://admin-demo.nopcommerce.com/login?ReturnUrl=/admin/";
+	
 	
 	public static String getDirectorySlash(String folderName) {
 		if (isMac() || isUnix() || isSolaris()) {

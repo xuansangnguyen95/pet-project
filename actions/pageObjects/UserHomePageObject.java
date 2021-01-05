@@ -18,11 +18,17 @@ public class UserHomePageObject extends AbstractPage {
 		clickToElement(driver, UserHomePageUI.REGISTER_LINK);
 		return PageGeneratorManager.getUserRegisterPage(driver);
 	}
-
+	
 	public UserLoginPageObject clickToLoginLink() {
 		waitToElementClickable(driver, UserHomePageUI.LOGIN_LINK);		
 		clickToElement(driver, UserHomePageUI.LOGIN_LINK);
 		return PageGeneratorManager.getUserLoginPage(driver);
+	}
+
+	public UserHomePageObject clickToLogoutLink() {
+		waitToElementClickable(driver, UserHomePageUI.LOGOUT_LINK);		
+		clickToElement(driver, UserHomePageUI.LOGOUT_LINK);
+		return PageGeneratorManager.getUserHomePage(driver);
 	}
 
 	public boolean isMyAccountLinkDisplayed() {
@@ -58,7 +64,6 @@ public class UserHomePageObject extends AbstractPage {
 		waitToElementInvisible(driver, UserHomePageUI.LOGIN_LINK);
 		return isElementUndisplayed(driver, UserHomePageUI.LOGIN_LINK);
 	}
-
 
 
 }
