@@ -154,7 +154,7 @@ public class AbstractPage {
 
 	public void sendKeysToElement(WebDriver driver, String locator, String value, String... values) {
 		WebElement element = getElement(driver, getDynamicLocator(locator, values));
-		//element.clear();
+		element.clear();
 		sleepInMilisecond(500);
 		element.sendKeys(value);
 	}
@@ -170,9 +170,15 @@ public class AbstractPage {
 		Select select = new Select(element);
 		select.selectByVisibleText(itemValue);
 	}
-
+	
 	public String getFirstSelectedText(WebDriver driver, String locator) {
 		WebElement element = getElement(driver, locator);
+		Select select = new Select(element);
+		return select.getFirstSelectedOption().getText();
+	}
+
+	public String getFirstSelectedText(WebDriver driver, String locator, String... values) {
+		WebElement element = getElement(driver, getDynamicLocator(locator, values));
 		Select select = new Select(element);
 		return select.getFirstSelectedOption().getText();
 	}
@@ -213,9 +219,14 @@ public class AbstractPage {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public String getElementAttribute(WebDriver driver, String locator, String attributeName) {
 		WebElement element = getElement(driver, locator);
+		return element.getAttribute(attributeName);
+	}
+
+	public String getElementAttribute(WebDriver driver, String locator, String attributeName, String... values) {
+		WebElement element = getElement(driver, getDynamicLocator(locator, values));
 		return element.getAttribute(attributeName);
 	}
 	
@@ -232,7 +243,6 @@ public class AbstractPage {
 	public int countElementSize(WebDriver driver, String locator) {
 		return getElements(driver, locator).size();
 	}
-	
 
 	public int countElementSize(WebDriver driver, String locator, String... values) {
 		return getElements(driver, getDynamicLocator(locator, values)).size();
@@ -564,4 +574,18 @@ public class AbstractPage {
 		return getElementText(driver, AbstractPageUI.DYNAMIC_ERROR_MESSAGE, fieldValue);
 	}
 	
+	public String getAttributeByValue(WebDriver driver, String fieldValue, String attributeName) {
+		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_ID, fieldValue);
+		return getElementAttribute(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON_BY_ID, attributeName, fieldValue);
+	}
+	
+	public String getFirstSelectedInDropdownByName(WebDriver driver, String dropdownName) {
+		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownName);
+		return getFirstSelectedText(driver, AbstractPageUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownName);
+	}
+	
+	public void clickToProductByName(WebDriver driver, String productName) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_PRODUCT_NAME, productName);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_PRODUCT_NAME, productName);
+	}
 }

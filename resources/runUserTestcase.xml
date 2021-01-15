@@ -18,7 +18,7 @@
 			<class name="com.nopcommerce.common.Common_01_Register" />
 <!-- 			<class name="com.nopcommerce.users.Level15_Register_Login_Share_State_Part1" /> -->
 <!-- 			<class name="com.nopcommerce.users.Level15_Register_Login_Share_State_Part2" /> -->
-			<class name="com.nopcommerce.users.Login" />
+			<class name="com.nopcommerce.users.MyAccount" />
 		</classes>
 	</test>   
 

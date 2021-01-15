@@ -100,19 +100,11 @@ public class Common_01_Register extends AbstractTest {
 		log.info("PreCondition - Step 15: verify success message displayed");
 		verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 		 
+		System.out.println(email);
 		sleepInMilisecond(1000);
 		driver.quit();
 	}
 
-	@Test
-	public void TC01_Search_Product_With_Name() {
-		
-	}
-	
-	@Test
-	public void TC02_Search_Product_With_Category() {
-	}
-	
 
 	@AfterTest
 	public void afterClass() {

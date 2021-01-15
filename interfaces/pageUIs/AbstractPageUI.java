@@ -7,6 +7,8 @@ public class AbstractPageUI {
 	public static final String MY_ACCOUNT_LINK = "//ul[@class='list']//a[text()='My account']";
 	public static final String WISH_LIST_LINK = "//div[@class='header-links']//span[text()='Wishlist']";
 	public static final String HOMEPAGE_LINK = "//img[@alt='nopCommerce demo store']";
+	public static final String LOGOUT_LINK = "//a[@class='ico-logout']";
+	
 	
 	public static final String DYNAMIC_LINK = "//ul[@class='list']//a[text()='%s']";
 	public static final String UPLOAD_FILE_TYPE_BY_PANEL = "//div[@id='%s']//input[@type='file']";
@@ -17,4 +19,7 @@ public class AbstractPageUI {
 	public static final String DYNAMIC_DROPDOWN_BY_NAME = "//select[@name='%s']";
 	
 	public static final String DYNAMIC_ERROR_MESSAGE = "//span[@id='%s-error']";
+	
+	public static final String DYNAMIC_PRODUCT_NAME = "//a[text()='%s']";
+	
 }

@@ -47,4 +47,24 @@ public class PageGeneratorManager {
 		return new AdminProductPageObject(driver);
 	}
 	
+	public static UserAddressesPageObject getUserAddressesPage(WebDriver driver) {
+		return new UserAddressesPageObject(driver);
+	}
+	
+	public static UserChangePasswordPageObject getUserChangePasswordPage(WebDriver driver) {
+		return new UserChangePasswordPageObject(driver);
+	}
+	
+	public static UserProductDetailPageObject getUserProductDetailPage(WebDriver driver) {
+		return new UserProductDetailPageObject(driver);
+	}
+	
+	public static UserProductReviewPageObject getUserProductReviewPage(WebDriver driver) {
+		return new UserProductReviewPageObject(driver);
+	}
+	
+	public static UserMyProductReviewPageObject getUserMyProductReviewPage(WebDriver driver) {
+		return new UserMyProductReviewPageObject(driver);
+	}
+	
 }

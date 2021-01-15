@@ -1,21 +1,78 @@
-[INFO ] [2020-12-18 00:12:31,196] Register - Step 01: Open homepage
-[INFO ] [2020-12-18 00:12:31,198] Register - Step 04: click register link at hompage
-[INFO ] [2020-12-18 00:12:31,808] Register - Step 05: click to gender male radio button
-[INFO ] [2020-12-18 00:12:32,067] Register - Step 06: input to Firstname textbox with value: john
-[INFO ] [2020-12-18 00:12:32,642] Register - Step 07: input to Lastname textbox with value: gacy
-[INFO ] [2020-12-18 00:12:33,202] Register - Step 08: select date dropdown with value: 21
-[INFO ] [2020-12-18 00:12:33,476] Register - Step 09: select month dropdown with value: August
-[INFO ] [2020-12-18 00:12:33,752] Register - Step 10: select year dropdown with value: 1999
-[INFO ] [2020-12-18 00:12:34,035] Register - Step 11: input to Email textbox with value: johngacy349@gmail.com
-[INFO ] [2020-12-18 00:12:34,609] Register - Step 12: input to CompanyName textbox
-[INFO ] [2020-12-18 00:12:35,167] Register - Step 13: input to Password textbox with value: johngacy
-[INFO ] [2020-12-18 00:12:36,275] Register - Step 14: click to Register button at Register page
-[INFO ] [2020-12-18 00:12:37,932] Register - Step 15: verify success message displayed
-[INFO ] [2020-12-18 00:12:37,985]  -------------------------- PASSED -------------------------- 
-[INFO ] [2020-12-18 00:12:37,985] Register - Step 16: click to logout link and navigate to homepage
-[INFO ] [2020-12-18 00:12:39,841] Login - Step 01: open login page
-[INFO ] [2020-12-18 00:12:41,036] Login - Step 02: input to Email textbox with value: johngacy349@gmail.com
-[INFO ] [2020-12-18 00:12:41,626] Login - Step 03: input to Password textbox with value: johngacy
-[INFO ] [2020-12-18 00:12:42,172] Login - Step 04: click to Login button at Login page
-[INFO ] [2020-12-18 00:12:43,064] OS name = windows 10
-[INFO ] [2020-12-18 00:12:43,746] ---------- QUIT BROWSER SUCCESS ----------
+[INFO ] [2021-01-15 19:11:19,751] Precondition - Step 01: Open homepage
+[INFO ] [2021-01-15 19:11:19,751] Precondition - Step 02: click register link at hompage
+[INFO ] [2021-01-15 19:11:21,188] Precondition - Step 03: input to Email textbox with value: johngacy961@gmail.com
+[INFO ] [2021-01-15 19:11:21,758] Precondition - Step 04: input to Password textbox with value: johngacy
+[INFO ] [2021-01-15 19:11:22,320] Precondition - Step 05: click to 'Login' button at Login Page
+[INFO ] [2021-01-15 19:11:23,925] Precondition - Step 06: click to 'My Account' link on header
+[INFO ] [2021-01-15 19:11:25,434] Update Customer Data - Step 01: click to gender male radio button
+[INFO ] [2021-01-15 19:11:25,694] Update Customer Data - Step 02: edit Firstname textbox with value: automation
+[INFO ] [2021-01-15 19:11:26,283] Update Customer Data - Step 03: edit Lastname textbox with value: FC
+[INFO ] [2021-01-15 19:11:26,846] Update Customer Data - Step 04: select date dropdown with value: 1
+[INFO ] [2021-01-15 19:11:27,110] Update Customer Data - Step 05: select month dropdown with value: January
+[INFO ] [2021-01-15 19:11:27,392] Update Customer Data - Step 06: select year dropdown with value: 1999
+[INFO ] [2021-01-15 19:11:27,442] Update Customer Data - Step 07: edit Email textbox with value: automationfc.vn01@gmail.com
+[INFO ] [2021-01-15 19:11:28,012] Update Customer Data - Step 08: edit CompanyName textbox
+[INFO ] [2021-01-15 19:11:28,578] Update Customer Data - Step 09: click to Save button at Customer info page
+[INFO ] [2021-01-15 19:11:30,143] Update Customer Data - Step 10: verify data after editing
+[INFO ] [2021-01-15 19:11:30,188]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:30,221]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:30,256]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:30,319]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:30,373]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:30,666]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:30,699]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:30,731]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:30,744] Add Addresses - Step 01: click to 'Addresses' on side menu
+[INFO ] [2021-01-15 19:11:31,236] Add Addresses - Step 02: click to 'Add New' button
+[INFO ] [2021-01-15 19:11:31,810] Add Addresses - Step 03: input to 'First name' textbox with value: automation
+[INFO ] [2021-01-15 19:11:32,374] Add Addresses - Step 04: input to 'Last name' textbox with value: FC
+[INFO ] [2021-01-15 19:11:32,927] Add Addresses - Step 05: input to 'Email' textbox with value: automationfc.vn01@gmail.com
+[INFO ] [2021-01-15 19:11:33,494] Add Addresses - Step 06: input to 'Company' textbox with value: Automation FC
+[INFO ] [2021-01-15 19:11:34,060] Add Addresses - Step 07: input to 'Country' textbox with value: Viet Nam
+[INFO ] [2021-01-15 19:11:34,328] Add Addresses - Step 07: input to 'Country' textbox with value: Other
+[INFO ] [2021-01-15 19:11:34,411] Add Addresses - Step 08: input to 'City' textbox with value: Da Nang
+[INFO ] [2021-01-15 19:11:34,964] Add Addresses - Step 09: input to 'Address 1' textbox with value: 123/04 Le Lai
+[INFO ] [2021-01-15 19:11:35,519] Add Addresses - Step 10: input to 'Address 2' textbox with value: 234/05 Hai Phong
+[INFO ] [2021-01-15 19:11:36,076] Add Addresses - Step 11: input to 'Zip / postal code' textbox with value: 550000
+[INFO ] [2021-01-15 19:11:36,625] Add Addresses - Step 12: input to 'Phone Number' textbox with value: 0123456789
+[INFO ] [2021-01-15 19:11:37,180] Add Addresses - Step 13: input to 'Fax Number' textbox with value: 0987654321
+[INFO ] [2021-01-15 19:11:37,739] Add Address - Step 14: click 'Save' button
+[INFO ] [2021-01-15 19:11:39,397] Add Address - Step 15: verify data after saving
+[INFO ] [2021-01-15 19:11:39,449]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:39,489]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:39,520]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:39,548]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:39,577]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:39,607]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:39,631]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:39,660]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:39,692] Change Password - Step 01: click to 'Change password' on side menu
+[INFO ] [2021-01-15 19:11:40,140] Change Password - Step 02: input to textbox 'Old Password' with value: johngacy
+[INFO ] [2021-01-15 19:11:40,718] Change Password - Step 03: input to textbox 'New password' with value: password
+[INFO ] [2021-01-15 19:11:41,272] Change Password - Step 04: input to textbox 'Confirm password' with value: password
+[INFO ] [2021-01-15 19:11:41,834] Change Password - Step 05: click to 'Change Password' button
+[INFO ] [2021-01-15 19:11:42,326] Change Password - Step 06: verify password changed successfully
+[INFO ] [2021-01-15 19:11:42,369]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:42,369] Change Password - Step 07: click 'Log out' link on header
+[INFO ] [2021-01-15 19:11:44,972] Change Password - Step 08: click 'Log in' link on header
+[INFO ] [2021-01-15 19:11:45,438] Change Password - Step 09: input to Email textbox with value: automationfc.vn01@gmail.com
+[INFO ] [2021-01-15 19:11:46,041] Change Password - Step 10: input to Password textbox with value: johngacy
+[INFO ] [2021-01-15 19:11:46,611] Change Password - Step 11: click to 'Login' button at Login Page
+[INFO ] [2021-01-15 19:11:47,165] Change Password - Step 12: verify summary error message 'password' textbox
+[INFO ] [2021-01-15 19:11:47,210]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:47,210] Change Password - Step 13: input to Password textbox with value: password
+[INFO ] [2021-01-15 19:11:47,768] Change Password - Step 14: click to 'Login' button at Login Page
+[INFO ] [2021-01-15 19:11:48,598] Change Password - Step 15: verify 'My Account' link is visible
+[INFO ] [2021-01-15 19:11:48,653]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:48,659] Add Product Review - Step 01: click to product 'Apple MacBook Pro 13-inch'
+[INFO ] [2021-01-15 19:11:50,275] Add Product Review - Step 02: click 'Add your review' link
+[INFO ] [2021-01-15 19:11:50,785] Add Product Review - Step 03: input to textbox 'Review title' with value: This is a review title
+[INFO ] [2021-01-15 19:11:51,381] Add Product Review - Step 04: input to textbox 'Review text' with value: This is a review text
+[INFO ] [2021-01-15 19:11:51,948] Add Product Review - Step 05: click to radio button 4 'Rating'
+[INFO ] [2021-01-15 19:11:52,212] Add Product Review - Step 06: click to button 'Submit Review'
+[INFO ] [2021-01-15 19:11:52,717] Add Product Review - Step 07: click to 'My Account' link on header
+[INFO ] [2021-01-15 19:11:53,238] Add Product Review - Step 08: click to 'My product reviews' link on sidemenu
+[INFO ] [2021-01-15 19:11:53,730] Add Product Review - Step 09: verify review is visible in 'My Product Review' page
+[INFO ] [2021-01-15 19:11:53,760]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-15 19:11:53,763] OS name = windows 10
+[INFO ] [2021-01-15 19:11:54,547] ---------- QUIT BROWSER SUCCESS ----------
