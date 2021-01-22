@@ -65,5 +65,10 @@ public class UserHomePageObject extends AbstractPage {
 		return isElementUndisplayed(driver, UserHomePageUI.LOGIN_LINK);
 	}
 
+	public void clickToSearchLink() {
+		waitToElementClickable(driver, UserHomePageUI.SEARCH_LINK);		
+		clickToElement(driver, UserHomePageUI.SEARCH_LINK);
+	}
+
 
 }

@@ -1,78 +1,69 @@
-[INFO ] [2021-01-15 19:11:19,751] Precondition - Step 01: Open homepage
-[INFO ] [2021-01-15 19:11:19,751] Precondition - Step 02: click register link at hompage
-[INFO ] [2021-01-15 19:11:21,188] Precondition - Step 03: input to Email textbox with value: johngacy961@gmail.com
-[INFO ] [2021-01-15 19:11:21,758] Precondition - Step 04: input to Password textbox with value: johngacy
-[INFO ] [2021-01-15 19:11:22,320] Precondition - Step 05: click to 'Login' button at Login Page
-[INFO ] [2021-01-15 19:11:23,925] Precondition - Step 06: click to 'My Account' link on header
-[INFO ] [2021-01-15 19:11:25,434] Update Customer Data - Step 01: click to gender male radio button
-[INFO ] [2021-01-15 19:11:25,694] Update Customer Data - Step 02: edit Firstname textbox with value: automation
-[INFO ] [2021-01-15 19:11:26,283] Update Customer Data - Step 03: edit Lastname textbox with value: FC
-[INFO ] [2021-01-15 19:11:26,846] Update Customer Data - Step 04: select date dropdown with value: 1
-[INFO ] [2021-01-15 19:11:27,110] Update Customer Data - Step 05: select month dropdown with value: January
-[INFO ] [2021-01-15 19:11:27,392] Update Customer Data - Step 06: select year dropdown with value: 1999
-[INFO ] [2021-01-15 19:11:27,442] Update Customer Data - Step 07: edit Email textbox with value: automationfc.vn01@gmail.com
-[INFO ] [2021-01-15 19:11:28,012] Update Customer Data - Step 08: edit CompanyName textbox
-[INFO ] [2021-01-15 19:11:28,578] Update Customer Data - Step 09: click to Save button at Customer info page
-[INFO ] [2021-01-15 19:11:30,143] Update Customer Data - Step 10: verify data after editing
-[INFO ] [2021-01-15 19:11:30,188]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:30,221]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:30,256]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:30,319]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:30,373]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:30,666]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:30,699]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:30,731]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:30,744] Add Addresses - Step 01: click to 'Addresses' on side menu
-[INFO ] [2021-01-15 19:11:31,236] Add Addresses - Step 02: click to 'Add New' button
-[INFO ] [2021-01-15 19:11:31,810] Add Addresses - Step 03: input to 'First name' textbox with value: automation
-[INFO ] [2021-01-15 19:11:32,374] Add Addresses - Step 04: input to 'Last name' textbox with value: FC
-[INFO ] [2021-01-15 19:11:32,927] Add Addresses - Step 05: input to 'Email' textbox with value: automationfc.vn01@gmail.com
-[INFO ] [2021-01-15 19:11:33,494] Add Addresses - Step 06: input to 'Company' textbox with value: Automation FC
-[INFO ] [2021-01-15 19:11:34,060] Add Addresses - Step 07: input to 'Country' textbox with value: Viet Nam
-[INFO ] [2021-01-15 19:11:34,328] Add Addresses - Step 07: input to 'Country' textbox with value: Other
-[INFO ] [2021-01-15 19:11:34,411] Add Addresses - Step 08: input to 'City' textbox with value: Da Nang
-[INFO ] [2021-01-15 19:11:34,964] Add Addresses - Step 09: input to 'Address 1' textbox with value: 123/04 Le Lai
-[INFO ] [2021-01-15 19:11:35,519] Add Addresses - Step 10: input to 'Address 2' textbox with value: 234/05 Hai Phong
-[INFO ] [2021-01-15 19:11:36,076] Add Addresses - Step 11: input to 'Zip / postal code' textbox with value: 550000
-[INFO ] [2021-01-15 19:11:36,625] Add Addresses - Step 12: input to 'Phone Number' textbox with value: 0123456789
-[INFO ] [2021-01-15 19:11:37,180] Add Addresses - Step 13: input to 'Fax Number' textbox with value: 0987654321
-[INFO ] [2021-01-15 19:11:37,739] Add Address - Step 14: click 'Save' button
-[INFO ] [2021-01-15 19:11:39,397] Add Address - Step 15: verify data after saving
-[INFO ] [2021-01-15 19:11:39,449]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:39,489]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:39,520]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:39,548]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:39,577]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:39,607]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:39,631]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:39,660]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:39,692] Change Password - Step 01: click to 'Change password' on side menu
-[INFO ] [2021-01-15 19:11:40,140] Change Password - Step 02: input to textbox 'Old Password' with value: johngacy
-[INFO ] [2021-01-15 19:11:40,718] Change Password - Step 03: input to textbox 'New password' with value: password
-[INFO ] [2021-01-15 19:11:41,272] Change Password - Step 04: input to textbox 'Confirm password' with value: password
-[INFO ] [2021-01-15 19:11:41,834] Change Password - Step 05: click to 'Change Password' button
-[INFO ] [2021-01-15 19:11:42,326] Change Password - Step 06: verify password changed successfully
-[INFO ] [2021-01-15 19:11:42,369]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:42,369] Change Password - Step 07: click 'Log out' link on header
-[INFO ] [2021-01-15 19:11:44,972] Change Password - Step 08: click 'Log in' link on header
-[INFO ] [2021-01-15 19:11:45,438] Change Password - Step 09: input to Email textbox with value: automationfc.vn01@gmail.com
-[INFO ] [2021-01-15 19:11:46,041] Change Password - Step 10: input to Password textbox with value: johngacy
-[INFO ] [2021-01-15 19:11:46,611] Change Password - Step 11: click to 'Login' button at Login Page
-[INFO ] [2021-01-15 19:11:47,165] Change Password - Step 12: verify summary error message 'password' textbox
-[INFO ] [2021-01-15 19:11:47,210]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:47,210] Change Password - Step 13: input to Password textbox with value: password
-[INFO ] [2021-01-15 19:11:47,768] Change Password - Step 14: click to 'Login' button at Login Page
-[INFO ] [2021-01-15 19:11:48,598] Change Password - Step 15: verify 'My Account' link is visible
-[INFO ] [2021-01-15 19:11:48,653]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:48,659] Add Product Review - Step 01: click to product 'Apple MacBook Pro 13-inch'
-[INFO ] [2021-01-15 19:11:50,275] Add Product Review - Step 02: click 'Add your review' link
-[INFO ] [2021-01-15 19:11:50,785] Add Product Review - Step 03: input to textbox 'Review title' with value: This is a review title
-[INFO ] [2021-01-15 19:11:51,381] Add Product Review - Step 04: input to textbox 'Review text' with value: This is a review text
-[INFO ] [2021-01-15 19:11:51,948] Add Product Review - Step 05: click to radio button 4 'Rating'
-[INFO ] [2021-01-15 19:11:52,212] Add Product Review - Step 06: click to button 'Submit Review'
-[INFO ] [2021-01-15 19:11:52,717] Add Product Review - Step 07: click to 'My Account' link on header
-[INFO ] [2021-01-15 19:11:53,238] Add Product Review - Step 08: click to 'My product reviews' link on sidemenu
-[INFO ] [2021-01-15 19:11:53,730] Add Product Review - Step 09: verify review is visible in 'My Product Review' page
-[INFO ] [2021-01-15 19:11:53,760]  -------------------------- PASSED -------------------------- 
-[INFO ] [2021-01-15 19:11:53,763] OS name = windows 10
-[INFO ] [2021-01-15 19:11:54,547] ---------- QUIT BROWSER SUCCESS ----------
+[INFO ] [2021-01-22 13:45:03,956] Precondition - Step 06: Open search page
+[INFO ] [2021-01-22 13:45:05,504] Search With Empty Data - Step 01: click Search button
+[INFO ] [2021-01-22 13:45:06,834] Search With Empty Data - Step 02: verify Search warning
+[INFO ] [2021-01-22 13:45:06,885]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-22 13:45:06,901] Search With Data Not Exist - Step 01: input to Search textbox with value: Macbook Pro 2050
+[INFO ] [2021-01-22 13:45:07,488] Search With Data Not Exist - Step 02: click Search button
+[INFO ] [2021-01-22 13:45:08,828] Search With Data Not Exist - Step 03: verify Search warning
+[INFO ] [2021-01-22 13:45:08,879]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-22 13:45:08,886] Search With Product Name - Step 01: input to Search textbox with value: Lenovo
+[INFO ] [2021-01-22 13:45:09,458] Search With Product Name - Step 02: click Search button
+[INFO ] [2021-01-22 13:45:10,762] Search With Product Name - Step 03: verify there is only 2 products
+[INFO ] [2021-01-22 13:45:10,808]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-22 13:45:10,808] Search With Product Name - Step 04: input to Search textbox with value: thinkpad x1 carbon
+[INFO ] [2021-01-22 13:45:11,403] Search With Product Name - Step 05: click Search button
+[INFO ] [2021-01-22 13:45:11,995] Search With Product Name - Step 06: verify there is only 1 products
+[INFO ] [2021-01-22 13:45:12,040]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-22 13:45:12,047] Advanced Search With Parent Categories - Step 01: input to Search textbox with value: apple macbook pro
+[INFO ] [2021-01-22 13:45:12,642] Advanced Search With Parent Categories - Step 02: check to checkbox 'Advanced Search'
+[INFO ] [2021-01-22 13:45:12,909] Advanced Search With Parent Categories - Step 03: select 'Computers' in 'Category' dropdown
+[INFO ] [2021-01-22 13:45:13,200] Advanced Search With Parent Categoriese - Step 04: click Search button
+[INFO ] [2021-01-22 13:45:13,797] Advanced Search With Parent Categoriese - Step 05: verify Search warning
+[INFO ] [2021-01-22 13:45:13,843]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-22 13:45:13,851] Advanced Search With Sub Categories - Step 01: input to Search textbox with value: apple macbook pro
+[INFO ] [2021-01-22 13:45:14,413] Advanced Search With Sub Categories - Step 02: check to checkbox 'Advanced Search'
+[INFO ] [2021-01-22 13:45:14,444] Advanced Search With Sub Categories - Step 03: select 'Computers' in 'Category' dropdown
+[INFO ] [2021-01-22 13:45:14,504] Advanced Search With Sub Categories - Step 04: check to checkbox 'Advanced Search'
+[INFO ] [2021-01-22 13:45:14,758] Advanced Search With Sub Categoriese - Step 05: click Search button
+[INFO ] [2021-01-22 13:45:16,416] Advanced Search With Sub Categoriese - Step 06: verify there is only 1 products
+[INFO ] [2021-01-22 13:45:16,459]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-22 13:45:16,464] Advanced Search With Incorrect Manufacturer - Step 01: input to Search textbox with value: apple macbook pro
+[INFO ] [2021-01-22 13:45:17,069] Advanced Search With Incorrect Manufacturer - Step 02: check to checkbox 'Advanced Search'
+[INFO ] [2021-01-22 13:45:17,102] Advanced Search With Incorrect Manufacturer - Step 03: select 'Computers' in 'Category' dropdown
+[INFO ] [2021-01-22 13:45:17,162] Advanced Search With Incorrect Manufacturer - Step 04: check to checkbox 'Advanced Search'
+[INFO ] [2021-01-22 13:45:17,192] Advanced Search With Incorrect Manufacturer - Step 05: select 'Computers' in 'Category' dropdown
+[INFO ] [2021-01-22 13:45:17,465] Advanced Search With Incorrect Manufacturer - Step 06: click Search button
+[INFO ] [2021-01-22 13:45:18,790] Advanced Search With Incorrect Manufacturer - Step 07: verify Search warning
+[INFO ] [2021-01-22 13:45:18,838]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-22 13:45:18,845] Advanced Search With Correct Manufacturer - Step 01: input to Search textbox with value: apple macbook pro
+[INFO ] [2021-01-22 13:45:19,434] Advanced Search With Correct Manufacturer - Step 02: check to checkbox 'Advanced Search'
+[INFO ] [2021-01-22 13:45:19,464] Advanced Search With Correct Manufacturer - Step 03: select 'Computers' in 'Category' dropdown
+[INFO ] [2021-01-22 13:45:19,510] Advanced Search With Correct Manufacturer - Step 04: check to checkbox 'Advanced Search'
+[INFO ] [2021-01-22 13:45:19,541] Advanced Search With Correct Manufacturer - Step 05: select 'Computers' in 'Category' dropdown
+[INFO ] [2021-01-22 13:45:19,796] Advanced Search With Correct Manufacturer - Step 06: click Search button
+[INFO ] [2021-01-22 13:45:20,464] Advanced Search With Correct Manufacturer - Step 07: verify there is only 1 products
+[INFO ] [2021-01-22 13:45:20,502]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-22 13:45:20,507] Advanced Search In Price Range - Step 01: input to Search textbox with value: apple macbook pro
+[INFO ] [2021-01-22 13:45:21,076] Advanced Search In Price Range - Step 02: check to checkbox 'Advanced Search'
+[INFO ] [2021-01-22 13:45:21,119] Advanced Search In Price Range - Step 03: select 'Computers' in 'Category' dropdown
+[INFO ] [2021-01-22 13:45:21,168] Advanced Search In Price Range - Step 04: check to checkbox 'Advanced Search'
+[INFO ] [2021-01-22 13:45:21,199] Advanced Search In Price Range - Step 05: select 'Computers' in 'Category' dropdown
+[INFO ] [2021-01-22 13:45:21,239] Advanced Search In Price Range - Step 06: select price range 1000-2000
+[INFO ] [2021-01-22 13:45:22,362] Advanced Search In Price Range - Step 07: click Search button
+[INFO ] [2021-01-22 13:45:22,985] Advanced Search In Price Range - Step 08: verify there is only 1 products
+[INFO ] [2021-01-22 13:45:23,019]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-22 13:45:23,031] Advanced Search Not In Price Range - Step 01: input to Search textbox with value: apple macbook pro
+[INFO ] [2021-01-22 13:45:23,617] Advanced Search Not In Price Range - Step 02: check to checkbox 'Advanced Search'
+[INFO ] [2021-01-22 13:45:23,646] Advanced Search Not In Price Range - Step 03: select 'Computers' in 'Category' dropdown
+[INFO ] [2021-01-22 13:45:23,694] Advanced Search Not In Price Range - Step 04: check to checkbox 'Advanced Search'
+[INFO ] [2021-01-22 13:45:23,724] Advanced Search Not In Price Range - Step 05: select 'Computers' in 'Category' dropdown
+[INFO ] [2021-01-22 13:45:23,767] Advanced Search Not In Price Range - Step 06: select price range 1000-1700
+[INFO ] [2021-01-22 13:45:24,873] Advanced Search Not In Price Range - Step 07: click Search button
+[INFO ] [2021-01-22 13:45:25,482] Advanced Search Not In Price Range - Step 08: verify search warning
+[INFO ] [2021-01-22 13:45:25,534]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-22 13:45:25,534] Advanced Search Not In Price Range - Step 09: select price range 1900-5000
+[INFO ] [2021-01-22 13:45:26,668] Advanced Search Not In Price Range - Step 10: click Search button
+[INFO ] [2021-01-22 13:45:27,265] Advanced Search Not In Price Range - Step 11: verify search warning
+[INFO ] [2021-01-22 13:45:27,307]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-01-22 13:45:27,312] OS name = windows 10
+[INFO ] [2021-01-22 13:45:28,046] ---------- QUIT BROWSER SUCCESS ----------
