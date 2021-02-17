@@ -23,6 +23,7 @@ import pageObjects.UserShippingAndReturnPageObject;
 import pageObjects.UserSitemapPageObject;
 import pageObjects.UserWishListPageObject;
 import pageUIs.AbstractPageUI;
+import pageUIs.AdminProductPageUI;
 
 public class AbstractPage {
 	
@@ -269,6 +270,13 @@ public class AbstractPage {
 		}
 	}
 	
+	public void uncheckToCheckbox(WebDriver driver, String locator, String... values) {
+		WebElement element = getElement(driver, getDynamicLocator(locator, values));
+		if(element.isSelected()) {
+			element.click();
+		}
+	}
+	
 	public void checkToUncheckbox(WebDriver driver, String locator, String... values) {
 		WebElement element = getElement(driver, getDynamicLocator(locator, values));
 		if(!element.isSelected()) {
@@ -287,6 +295,20 @@ public class AbstractPage {
 	public boolean isElementUndisplayed(WebDriver driver, String locator) {
 		overrideImplicitWait(driver, GlobalConstants.SHORT_TIMEOUT);
 		elements = getElements(driver, locator);
+		overrideImplicitWait(driver, GlobalConstants.LONG_TIMEOUT);
+		
+		if(elements.size() == 0) {
+			return true;
+		} else if(elements.size() > 0 && !elements.get(0).isDisplayed()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public boolean isElementUndisplayed(WebDriver driver, String locator, String... values) {
+		overrideImplicitWait(driver, GlobalConstants.SHORT_TIMEOUT);
+		elements = getElements(driver, getDynamicLocator(locator, values));
 		overrideImplicitWait(driver, GlobalConstants.LONG_TIMEOUT);
 		
 		if(elements.size() == 0) {
@@ -516,23 +538,23 @@ public class AbstractPage {
 		return PageGeneratorManager.getUserWishListPage(driver);
 	}
 
-	public AbstractPage openLinkByPageName(WebDriver driver, String pageName) {
-		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
-		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
-		
-		switch (pageName) {
-		case "Search":
-			return PageGeneratorManager.getUserSearchPage(driver);
-		case "Shipping & returns":
-			return PageGeneratorManager.getUserShippingAndReturnPage(driver);
-		case "Sitemap":
-			return PageGeneratorManager.getUserSitemapPage(driver);
-		default:
-			return PageGeneratorManager.getUserCustomerInforPage(driver);
-		}
-	}
-	
-	public void openLinkWithPageName(WebDriver driver, String pageName) {
+//	public AbstractPage openLinkByPageName(WebDriver driver, String pageName) {
+//		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+//		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+//		
+//		switch (pageName) {
+//		case "Search":
+//			return PageGeneratorManager.getUserSearchPage(driver);
+//		case "Shipping & returns":
+//			return PageGeneratorManager.getUserShippingAndReturnPage(driver);
+//		case "Sitemap":
+//			return PageGeneratorManager.getUserSitemapPage(driver);
+//		default:
+//			return PageGeneratorManager.getUserCustomerInforPage(driver);
+//		}
+//	}
+//	
+	public void openLinkByPageName(WebDriver driver, String pageName) {
 		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
 		
@@ -552,6 +574,16 @@ public class AbstractPage {
 	public void clickToRadioButtonByID(WebDriver driver, String radioButtonID) {
 		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON_BY_ID, radioButtonID);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON_BY_ID, radioButtonID);
+	}
+	
+	public void clickToCheckboxByID(WebDriver driver, String checkboxID) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_CHECKBOX_BY_ID, checkboxID);
+		checkToCheckbox(driver, AbstractPageUI.DYNAMIC_CHECKBOX_BY_ID, checkboxID);
+	}
+	
+	public void clickToUncheckboxByID(WebDriver driver, String checkboxID) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_CHECKBOX_BY_ID, checkboxID);
+		uncheckToCheckbox(driver, AbstractPageUI.DYNAMIC_CHECKBOX_BY_ID, checkboxID);
 	}
 	
 	public void clickToButtonByValue(WebDriver driver, String buttonValue) {
@@ -588,4 +620,23 @@ public class AbstractPage {
 		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_PRODUCT_NAME, productName);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_PRODUCT_NAME, productName);
 	}
+	
+	public void clickToHomepage(WebDriver driver) {
+		waitToElementClickable(driver, AbstractPageUI.HOMEPAGE_LINK);
+		clickToElement(driver, AbstractPageUI.HOMEPAGE_LINK);
+	}
+	
+	public void addToCompareByProductName(WebDriver driver, String productName) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_ADD_TO_COMPARE_BUTTON, productName);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_ADD_TO_COMPARE_BUTTON, productName);
+		sleepInMilisecond(2000);
+	}
+	
+	public void waitAjaxLoadingInvisible(WebDriver driver) {
+		waitToElementInvisible(driver, AdminProductPageUI.LOADING_ICON);
+	}
+
+
+
+
 }

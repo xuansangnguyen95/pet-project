@@ -3,6 +3,7 @@ package pageObjects;
 import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
+import pageUIs.UserCheckoutPageUI;
 import pageUIs.UserCustomerInfoPageUI;
 
 public class UserCustomerInforPageObject extends AbstractPage {

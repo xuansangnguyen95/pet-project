@@ -7,4 +7,9 @@ public class UserHomePageUI {
 	public static final String MY_ACCOUNT_LINK = "//a[@class='ico-account']";
 	
 	public static final String SEARCH_LINK = "//ul[@class='list']//a[text()='Search']";
+	
+	public static final String COMPUTERS_ON_HEADER = "//ul[@class='top-menu notmobile']//a[text()='Computers ']";
+	
+	public static final String TOP_MESSAGE = "//div[@class='bar-notification success']/p";
+
 }

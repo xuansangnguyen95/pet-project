@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import commons.AbstractPage;
 import pageUIs.AbstractPageUI;
 import pageUIs.UserHomePageUI;
+import pageUIs.UserWishListPageUI;
 
 public class UserHomePageObject extends AbstractPage {
 	WebDriver driver;
@@ -68,6 +69,16 @@ public class UserHomePageObject extends AbstractPage {
 	public void clickToSearchLink() {
 		waitToElementClickable(driver, UserHomePageUI.SEARCH_LINK);		
 		clickToElement(driver, UserHomePageUI.SEARCH_LINK);
+	}
+
+	public void clickToComputersOnHeading() {
+		waitToElementClickable(driver, UserHomePageUI.COMPUTERS_ON_HEADER);		
+		clickToElement(driver, UserHomePageUI.COMPUTERS_ON_HEADER);
+	}
+
+	public String getTopMessage() {
+		waitToElementVisible(driver, UserHomePageUI.TOP_MESSAGE);
+		return getElementText(driver, UserHomePageUI.TOP_MESSAGE);
 	}
 
 

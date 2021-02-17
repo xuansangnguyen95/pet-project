@@ -67,4 +67,50 @@ public class PageGeneratorManager {
 		return new UserMyProductReviewPageObject(driver);
 	}
 	
+	public static UserComputersPageObject getUserComputersPage(WebDriver driver) {
+		return new UserComputersPageObject(driver);
+	}
+	
+	public static UserCompareProductPageObject getUserCompareProductPage(WebDriver driver) {
+		return new UserCompareProductPageObject(driver);
+	}
+	
+	public static UserRecentlyViewedProductPageObject getUserRecentlyViewedProductPage(WebDriver driver) {
+		return new UserRecentlyViewedProductPageObject(driver);
+	}
+	
+	public static UserShoppingCartPageObject getUserShoppingCartPage(WebDriver driver) {
+		return new UserShoppingCartPageObject(driver);
+	}
+	
+	public static UserCheckoutPageObject getUserCheckoutPage(WebDriver driver) {
+		return new UserCheckoutPageObject(driver);
+	}
+	
+	public static UserOrderDetailPageObject getUserOrderDetailPage(WebDriver driver) {
+		return new UserOrderDetailPageObject(driver);
+	}
+	
+	public static UserOrderListPageObject getUserOrderListPage(WebDriver driver) {
+		return new UserOrderListPageObject(driver);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

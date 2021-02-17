@@ -28,8 +28,8 @@ public class Common_01_Register extends AbstractTest {
 	WebDriver driver;
 	String source_folder = System.getProperty("user.dir");
 	Select select;
-	String firstName, lastName, companyName;
-	public static String email, password;
+	String firstName, lastName;
+	public static String email, password, companyName;
 	
 	UserHomePageObject homePage;
 	UserLoginPageObject loginPage;

@@ -6,6 +6,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -97,6 +99,8 @@ public class AbstractTest {
 			throw new RuntimeException("Please input valid browser name!");
 		}
 
+//		driver.manage().window().setPosition(new Point(0,0));
+//		driver.manage().window().setSize(new Dimension(1335,800));
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(url);
 		return driver;

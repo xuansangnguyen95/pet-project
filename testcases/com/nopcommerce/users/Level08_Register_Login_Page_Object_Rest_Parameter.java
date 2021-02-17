@@ -144,38 +144,38 @@ public class Level08_Register_Login_Page_Object_Rest_Parameter extends AbstractT
 		
 	}
 	
-	@Test
-	public void TC05_Switch_Page_02() {
-		//hompage -> search
-		searchPage = (UserSearchPageObject) homePage.openLinkByPageName(driver, "Search");
-		
-		//search -> shipping and return
-		shippingAndReturnPage = (UserShippingAndReturnPageObject) searchPage.openLinkByPageName(driver, "Shipping & returns");
-		
-		//shipping and return -> sitemap
-		sitemapPage = (UserSitemapPageObject) shippingAndReturnPage.openLinkByPageName(driver, "Sitemap");
-		
-		//sitemap -> footer my account
-		customerInforPage = (UserCustomerInforPageObject) sitemapPage.openLinkByPageName(driver, "My account");
-		
-	}
+//	@Test
+//	public void TC05_Switch_Page_02() {
+//		//hompage -> search
+//		searchPage = (UserSearchPageObject) homePage.openLinkByPageName(driver, "Search");
+//		
+//		//search -> shipping and return
+//		shippingAndReturnPage = (UserShippingAndReturnPageObject) searchPage.openLinkByPageName(driver, "Shipping & returns");
+//		
+//		//shipping and return -> sitemap
+//		sitemapPage = (UserSitemapPageObject) shippingAndReturnPage.openLinkByPageName(driver, "Sitemap");
+//		
+//		//sitemap -> footer my account
+//		customerInforPage = (UserCustomerInforPageObject) sitemapPage.openLinkByPageName(driver, "My account");
+//		
+//	}
 	
 	@Test
 	public void TC05_Switch_Page_03() {
 		//hompage -> search
-		homePage.openLinkWithPageName(driver, "Search");
+		homePage.openLinkByPageName(driver, "Search");
 		searchPage = PageGeneratorManager.getUserSearchPage(driver);
 		
 		//search -> shipping and return
-		searchPage.openLinkWithPageName(driver, "Shipping & returns");
+		searchPage.openLinkByPageName(driver, "Shipping & returns");
 		shippingAndReturnPage = PageGeneratorManager.getUserShippingAndReturnPage(driver);
 		
 		//shipping and return -> sitemap
-		shippingAndReturnPage.openLinkWithPageName(driver, "Sitemap");
+		shippingAndReturnPage.openLinkByPageName(driver, "Sitemap");
 		sitemapPage = PageGeneratorManager.getUserSitemapPage(driver);
 		
 		//sitemap -> footer my account
-		sitemapPage.openLinkWithPageName(driver, "My account");
+		sitemapPage.openLinkByPageName(driver, "My account");
 		customerInforPage = PageGeneratorManager.getUserCustomerInforPage(driver);
 	}
 
