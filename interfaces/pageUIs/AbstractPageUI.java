@@ -28,4 +28,11 @@ public class AbstractPageUI {
 	public static final String TOP_MESSAGE = "//div[@class='bar-notification success']/p";
 	
 	public static final String LOADING_ICON = "//div[@id='ajaxBusy']/span";
+	
+	//ADMIN SECTION
+	
+	public static final String DYNAMIC_BUTTON_BY_ID = "//button[@id='%s']";
+	public static final String TOP_ALERT = "//div[contains(@class, 'alert')]";
+	
+	public static final String DYNAMIC_ATTRIBUTE_BY_ID = "//input[@id='%s']";
 }

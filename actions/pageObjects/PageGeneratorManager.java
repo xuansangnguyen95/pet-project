@@ -95,6 +95,17 @@ public class PageGeneratorManager {
 		return new UserOrderListPageObject(driver);
 	}
 	
+	public static AdminProductDetailPageObject getAdminProductDetailPage(WebDriver driver) {
+		return new AdminProductDetailPageObject(driver);
+	}
+	
+	public static AdminCustomerPageObject getAdminCustomerPage(WebDriver driver) {
+		return new AdminCustomerPageObject(driver);
+	}
+	
+	public static AdminCustomerDetailPageObject getAdminCustomerDetailPage(WebDriver driver) {
+		return new AdminCustomerDetailPageObject(driver);
+	}
 	
 	
 	

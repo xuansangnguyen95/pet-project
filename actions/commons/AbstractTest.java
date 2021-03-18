@@ -116,7 +116,7 @@ public class AbstractTest {
 
 	protected int getRandomNumber() {
 		Random temp = new Random();
-		return temp.nextInt(999);
+		return temp.nextInt(9999);
 	}
 
 	public WebDriver getDriver() {

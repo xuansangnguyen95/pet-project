@@ -152,6 +152,12 @@ public class AdminProductPageObject extends AbstractPage {
 		waitToElementInvisible(driver, AdminProductPageUI.SPINNER_UPLOAD);
 		return isElementDisplayed(driver, AdminProductPageUI.FILENAME_UPLOAD, fileNames);
 	}
+
+	public String getNumberOfProduct() {
+		waitAjaxLoadingInvisible(driver);
+		waitToElementVisible(driver, AdminProductPageUI.NUMBER_OF_PRODUCT);
+		return getElementText(driver, AdminProductPageUI.NUMBER_OF_PRODUCT);
+	}
 	
 	
 	

@@ -15,10 +15,10 @@
 <!-- 			<class name="com.nopcommerce.users.Level11_Register_Login_Page_Element_Undisplayed" /> -->
 <!-- 			<class name="com.nopcommerce.users.Level12_Register_Login_Assert_Verify" /> -->
 <!-- 			<class name="com.nopcommerce.users.Level13_Register_Login_Report_HTML" /> -->
-			<class name="com.nopcommerce.common.Common_01_Register" />
+<!-- 			<class name="com.nopcommerce.common.Common_01_Register" /> -->
 <!-- 			<class name="com.nopcommerce.users.Level15_Register_Login_Share_State_Part1" /> -->
 <!-- 			<class name="com.nopcommerce.users.Level15_Register_Login_Share_State_Part2" /> -->
-			<class name="com.nopcommerce.users.Order" />
+			<class name="com.nopcommerce.users.Sort_Display_Paging" />
 		</classes>
 	</test>   
 

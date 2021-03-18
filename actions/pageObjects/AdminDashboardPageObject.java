@@ -16,8 +16,20 @@ public class AdminDashboardPageObject extends AbstractPage {
 	public AdminProductPageObject openProductPage() {
 		waitToElementClickable(driver, AdminDashboardPageUI.CATALOG_LINK_AT_SIDEBAR);
 		clickToElement(driver, AdminDashboardPageUI.CATALOG_LINK_AT_SIDEBAR);
+		
 		waitToElementClickable(driver, AdminDashboardPageUI.PRODUCT_LINK_AT_SIDEBAR);
 		clickToElement(driver, AdminDashboardPageUI.PRODUCT_LINK_AT_SIDEBAR);
 		return PageGeneratorManager.getAdminProductPage(driver);
 	}
+	
+	public AdminCustomerPageObject openCustomerPage() {
+		waitToElementClickable(driver, AdminDashboardPageUI.CUSTOMER_LINK_AT_SIDEBAR);
+		clickToElement(driver, AdminDashboardPageUI.CUSTOMER_LINK_AT_SIDEBAR);
+		
+		waitToElementClickable(driver, AdminDashboardPageUI.SUB_CUSTOMER_LINK_AT_SIDEBAR);
+		clickToElement(driver, AdminDashboardPageUI.SUB_CUSTOMER_LINK_AT_SIDEBAR);
+		return PageGeneratorManager.getAdminCustomerPage(driver);
+	}
+	
+	
 }

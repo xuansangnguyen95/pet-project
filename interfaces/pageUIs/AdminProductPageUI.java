@@ -32,5 +32,22 @@ public class AdminProductPageUI {
 	public static final String UPLOADED_PICTURE_DETAIL = "//a[contains(@href, '%s')]/parent::td[@data-columnname='PictureUrl']/following-sibling::td[@data-columnname='DisplayOrder' and text()='%s']/following-sibling::td[@data-columnname='OverrideAltAttribute' and text()='%s']/following-sibling::td[@data-columnname='OverrideTitleAttribute' and text()='%s']";	
 	public static final String SAVE_BUTTON = "//button[@name='save']";	
 	public static final String DELETE_BUTTON_BY_PRODUCT_TITLE = "//td[@data-columnname='OverrideTitleAttribute' and text()='%s']/following-sibling::td[@data-columnname='Id']//i[@class='fa fa-remove']";	
-	public static final String PRODUCT_DETAIL = "//img[contains(@src, '%s')]/parent::td/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td/i[contains(@class, '%s-icon')]";	
+	public static final String PRODUCT_DETAIL = "//img[contains(@src, '%s')]/parent::td/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td/i[contains(@class, '%s-icon')]";
+	
+	public static final String NUMBER_OF_PRODUCT = "//div[@id='products-grid_info']";
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

@@ -1,5 +1,7 @@
 package commons;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -23,7 +25,9 @@ import pageObjects.UserShippingAndReturnPageObject;
 import pageObjects.UserSitemapPageObject;
 import pageObjects.UserWishListPageObject;
 import pageUIs.AbstractPageUI;
+import pageUIs.AdminCustomerDetailPageUI;
 import pageUIs.AdminProductPageUI;
+import pageUIs.UserComputersPageUI;
 
 public class AbstractPage {
 	
@@ -328,6 +332,10 @@ public class AbstractPage {
 		return getElement(driver, locator).isSelected();
 	}
 	
+	public boolean isElementSelected(WebDriver driver, String locator, String... values) {
+		return getElement(driver, getDynamicLocator(locator, values)).isSelected();
+	}
+	
 	public boolean isElementEnabled(WebDriver driver, String locator) {
 		return getElement(driver, locator).isEnabled();
 	}
@@ -557,7 +565,6 @@ public class AbstractPage {
 	public void openLinkByPageName(WebDriver driver, String pageName) {
 		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
-		
 	}
 	
 	public void uploadFileByPanelID(WebDriver driver, String panelID, String... fileNames) {
@@ -589,6 +596,11 @@ public class AbstractPage {
 	public void clickToButtonByValue(WebDriver driver, String buttonValue) {
 		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, buttonValue);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, buttonValue);
+	}
+	
+	public void clickToButtonByID(WebDriver driver, String buttonID) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_ID, buttonID);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_ID, buttonID);
 	}
 	
 	public void inputToTextBoxByID(WebDriver driver, String textboxID, String value) {
@@ -636,7 +648,118 @@ public class AbstractPage {
 		waitToElementInvisible(driver, AdminProductPageUI.LOADING_ICON);
 	}
 
+	public String getTopAlert(WebDriver driver) {
+		waitToElementVisible(driver, AbstractPageUI.TOP_ALERT);
+		return getElementText(driver, AbstractPageUI.TOP_ALERT);
+	}
 
+	public String getElementAttributeByID(WebDriver driver, String ID, String attributeName) {
+		return getElementAttribute(driver, AbstractPageUI.DYNAMIC_ATTRIBUTE_BY_ID, attributeName, ID);
+	}
 
-
+	public boolean isRadioButtonCheckedByID(WebDriver driver, String radioButtonID) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON_BY_ID, radioButtonID);
+		return isElementSelected(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON_BY_ID, radioButtonID);
+	}
+	
+	public boolean isDataStringSortedAscending(WebDriver driver, String locator) {
+		
+		ArrayList<String> arrayList = new ArrayList<>();
+		
+		List<WebElement> elementList = driver.findElements(By.xpath(locator));
+		
+		for(WebElement element : elementList) {
+			arrayList.add(element.getText());
+		}
+		
+		ArrayList<String> sortedList = new ArrayList<>();
+		for(String child : arrayList) {
+			sortedList.add(child);
+		}
+		
+		Collections.sort(sortedList);
+		
+		return sortedList.equals(arrayList);
+	}
+	
+	public boolean isDataStringSortedDescending(WebDriver driver, String locator) {
+		
+		ArrayList<String> arrayList = new ArrayList<>();
+		
+		List<WebElement> elementList = driver.findElements(By.xpath(locator));
+		
+		for(WebElement element : elementList) {
+			arrayList.add(element.getText());
+		}
+		
+		ArrayList<String> sortedList = new ArrayList<>();
+		for(String child : arrayList) {
+			sortedList.add(child);
+		}
+		
+		Collections.sort(sortedList);
+		
+		Collections.reverse(sortedList);
+		
+		return sortedList.equals(arrayList);
+	}
+	
+	public boolean isDataFloatSortedDescending(WebDriver driver, String locator) {
+		
+		ArrayList<Float> arrayList = new ArrayList<Float>();
+		
+		List<WebElement> elementList = driver.findElements(By.xpath(locator));
+		
+		for(WebElement element : elementList) {
+			arrayList.add(Float.parseFloat(element.getText().replace("$", "").replace(",", "").trim()));
+		}
+		
+		ArrayList<Float> sortedList = new ArrayList<Float>();
+		for(Float child : arrayList) {
+			sortedList.add(child);
+		}
+		
+		Collections.sort(sortedList);
+		
+		Collections.reverse(sortedList);
+		
+		return sortedList.equals(arrayList);
+	}
+	
+	public boolean isDataFloatSortedAscending(WebDriver driver, String locator) {
+		
+		ArrayList<Float> arrayList = new ArrayList<Float>();
+		
+		List<WebElement> elementList = driver.findElements(By.xpath(locator));
+		
+		for(WebElement element : elementList) {
+			arrayList.add(Float.parseFloat(element.getText().replace("$", "").replace(",", "").trim()));
+		}
+		
+		ArrayList<Float> sortedList = new ArrayList<Float>();
+		for(Float child : arrayList) {
+			sortedList.add(child);
+		}
+		
+		Collections.sort(sortedList);
+		
+		return sortedList.equals(arrayList);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
